@@ -5,6 +5,7 @@ theme:
   name: material
   language: es  
   features:
+    - toc.integrate
     - content.code.copy 
   icon:
     logo: octicons/code-16
@@ -13,6 +14,7 @@ theme:
     primary: pink    
 
 markdown_extensions:
+  - def_list  
   - admonition
   - pymdownx.details 
   - pymdownx.superfences:
@@ -30,6 +32,7 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.blocks.caption
+  
 
 extra:
   generator: false  
@@ -55,5 +58,6 @@ nav:
   - Semana 16: p16.md
   - Semana 17: p17.md
   - Semana 18: p18.md
+  - Proyecto Integrador: pi.md
   
 
