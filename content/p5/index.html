@@ -1,0 +1,2730 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="jhonfvg">
+      
+      
+        <link rel="canonical" href="https://jfinfocesde.github.io/25ip/content/p5/">
+      
+      
+        <link rel="prev" href="../p4/">
+      
+      
+        <link rel="next" href="../p6/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Semana 5 - Fundamentación de los Sistemas de Control de Versiones - Introducción a la Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/password-protect.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#semana-5-fundamentacion-de-los-sistemas-de-control-de-versiones" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Introducción a la Programación" class="md-header__button md-logo" aria-label="Introducción a la Programación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Semana 5 - Fundamentación de los Sistemas de Control de Versiones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Contenido
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../pi/p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Proyecto Integrador
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Programación" class="md-nav__button md-logo" aria-label="Introducción a la Programación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    Introducción a la Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Contenido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Contenido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 1 - Pacto pedagógico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 2 - Introducción a HTML5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 3 - Tablas y Etiquetas Multimedia en HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 4 - Etiquetas de Formulario en HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Semana 5 - Fundamentación de los Sistemas de Control de Versiones
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Semana 5 - Fundamentación de los Sistemas de Control de Versiones
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-son" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué son?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beneficios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beneficios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es Git?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es Git?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beneficios-de-usar-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beneficios de usar Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-en-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo de trabajo en Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-de-configuracion-inicial-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos de configuración inicial de Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-comando-git-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      El comando git --version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-de-basicos-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos de básicos de Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos de básicos de Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      git init
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      git add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-add_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      git add .
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      git commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-commit-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      git commit -am
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      git clone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      git push
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      git pull
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Que es Github?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Que es Github?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-se-puede-entender-como-dos-cosas" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub se puede entender como dos cosas:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-basico-de-trabajo-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo básico de trabajo en GitHub:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git Pages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-de-manejo-de-branches-en-git-y-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial de manejo de branches en Git y GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial de manejo de branches en Git y GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-conceptos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Conceptos básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creando-y-manejando-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Creando y manejando branches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-trabajando-con-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Trabajando con GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-git-github-y-despliegue-en-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Git, GitHub y Despliegue en GitHub Pages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura del proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-1-configuracion-inicial-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Configuración inicial de Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 1: Configuración inicial de Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-verifica-la-instalacion-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Verifica la instalación de Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-configura-tu-nombre-y-correo-electronico" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Configura tu nombre y correo electrónico
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-2-crear-un-repositorio-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Crear un repositorio local
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 2: Crear un repositorio local">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-navega-al-directorio-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Navega al directorio del proyecto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-inicializa-el-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Inicializa el repositorio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-3-crear-un-repositorio-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Crear un repositorio en GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 3: Crear un repositorio en GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-crea-una-cuenta-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Crea una cuenta en GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-crea-un-nuevo-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Crea un nuevo repositorio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-4-conectar-el-repositorio-local-con-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 4: Conectar el repositorio local con GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 4: Conectar el repositorio local con GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-copia-la-url-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Copia la URL del repositorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-agrega-el-repositorio-remoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Agrega el repositorio remoto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-5-realizar-tu-primer-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 5: Realizar tu primer commit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 5: Realizar tu primer commit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-anade-todos-los-archivos-al-area-de-preparacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Añade todos los archivos al área de preparación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-realiza-el-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Realiza el commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-sube-los-cambios-a-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Sube los cambios a GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-6-desplegar-el-proyecto-en-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 6: Desplegar el proyecto en GitHub Pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 6: Desplegar el proyecto en GitHub Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-asegurate-de-que-tu-proyecto-tenga-un-archivo-indexhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Asegúrate de que tu proyecto tenga un archivo index.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cambia-la-estructura-si-es-necesario" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Cambia la estructura si es necesario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-activa-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Activa GitHub Pages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-espera-a-que-se-publique" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Espera a que se publique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-7-actualizar-el-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 7: Actualizar el proyecto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 7: Actualizar el proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-anade-los-cambios" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Añade los cambios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-realiza-un-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Realiza un commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-sube-los-cambios-a-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Sube los cambios a GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-verifica-el-sitio-actualizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 Verifica el sitio actualizado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-comandos-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumen de comandos útiles
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 6 - Evaluación Primer Momento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 7 - CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 8 - Metodología BEM y Unidades CSS: Fundamentos y Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 9 - Propiedades de Posicionamiento en CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 10 - ¿Qué es Flexbox?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 11 - ¿Qué es CSS Grid?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 12 - Evaluación Segundo Momento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 13 - Frameworks CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 14 - Tutorial: Creando Componentes con Tailwind CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 15
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 16
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 17
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 18
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto Integrador
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto Integrador
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción Proyecto Integrador
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Herramientas CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pautas para la exposición del proyecto integrador (15 minutos)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archivo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-son" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué son?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beneficios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beneficios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es Git?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es Git?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beneficios-de-usar-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beneficios de usar Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-en-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo de trabajo en Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-de-configuracion-inicial-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos de configuración inicial de Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-comando-git-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      El comando git --version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-de-basicos-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos de básicos de Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos de básicos de Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      git init
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      git add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-add_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      git add .
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      git commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-commit-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      git commit -am
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      git clone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      git push
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      git pull
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Que es Github?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Que es Github?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-se-puede-entender-como-dos-cosas" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub se puede entender como dos cosas:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-basico-de-trabajo-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo básico de trabajo en GitHub:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git Pages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-de-manejo-de-branches-en-git-y-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial de manejo de branches en Git y GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial de manejo de branches en Git y GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-conceptos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Conceptos básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creando-y-manejando-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Creando y manejando branches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-trabajando-con-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Trabajando con GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-git-github-y-despliegue-en-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Git, GitHub y Despliegue en GitHub Pages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura del proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-1-configuracion-inicial-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Configuración inicial de Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 1: Configuración inicial de Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-verifica-la-instalacion-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Verifica la instalación de Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-configura-tu-nombre-y-correo-electronico" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Configura tu nombre y correo electrónico
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-2-crear-un-repositorio-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Crear un repositorio local
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 2: Crear un repositorio local">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-navega-al-directorio-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Navega al directorio del proyecto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-inicializa-el-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Inicializa el repositorio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-3-crear-un-repositorio-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Crear un repositorio en GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 3: Crear un repositorio en GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-crea-una-cuenta-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Crea una cuenta en GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-crea-un-nuevo-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Crea un nuevo repositorio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-4-conectar-el-repositorio-local-con-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 4: Conectar el repositorio local con GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 4: Conectar el repositorio local con GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-copia-la-url-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Copia la URL del repositorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-agrega-el-repositorio-remoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Agrega el repositorio remoto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-5-realizar-tu-primer-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 5: Realizar tu primer commit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 5: Realizar tu primer commit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-anade-todos-los-archivos-al-area-de-preparacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Añade todos los archivos al área de preparación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-realiza-el-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Realiza el commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-sube-los-cambios-a-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Sube los cambios a GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-6-desplegar-el-proyecto-en-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 6: Desplegar el proyecto en GitHub Pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 6: Desplegar el proyecto en GitHub Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-asegurate-de-que-tu-proyecto-tenga-un-archivo-indexhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Asegúrate de que tu proyecto tenga un archivo index.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cambia-la-estructura-si-es-necesario" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Cambia la estructura si es necesario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-activa-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Activa GitHub Pages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-espera-a-que-se-publique" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Espera a que se publique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-7-actualizar-el-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 7: Actualizar el proyecto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 7: Actualizar el proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-anade-los-cambios" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Añade los cambios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-realiza-un-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Realiza un commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-sube-los-cambios-a-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Sube los cambios a GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-verifica-el-sitio-actualizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 Verifica el sitio actualizado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-comandos-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumen de comandos útiles
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="semana-5-fundamentacion-de-los-sistemas-de-control-de-versiones">Semana 5 - Fundamentación de los Sistemas de Control de Versiones</h1>
+<h2 id="que-son">¿Qué son?</h2>
+<p>Los sistemas de control de versiones (SCV) son herramientas que permiten el seguimiento y la gestión de cambios en archivos o conjuntos de archivos a lo largo del tiempo. Permiten:</p>
+<ul>
+<li>Registrar las modificaciones: Cada cambio realizado en un archivo se guarda como una nueva versión, creando un historial completo del desarrollo.</li>
+<li>Recuperar versiones anteriores: Si se comete un error o se desea volver a una versión anterior del proyecto, es posible hacerlo con facilidad.</li>
+<li>Colaborar en equipo: Los SCV facilitan el trabajo en equipo, permitiendo a varios usuarios trabajar en el mismo proyecto de forma simultánea y sincronizada.</li>
+<li>Compartir el código: Los SCV permiten compartir el código de forma pública o privada, facilitando la colaboración con otros desarrolladores.</li>
+</ul>
+<h2 id="beneficios">Beneficios</h2>
+<ul>
+<li>Mejora la calidad del código: Permite realizar un seguimiento de los cambios y revertir errores fácilmente.</li>
+<li>Facilita la colaboración: Permite trabajar en equipo de forma eficiente y segura.</li>
+<li>Aumenta la productividad: Ahorra tiempo al evitar la duplicación de trabajo y la pérdida de datos.</li>
+<li>Mejora la comunicación: Permite a los desarrolladores comprender mejor la evolución del proyecto.</li>
+<li>Promueve la transparencia: Permite a todos los miembros del equipo tener acceso al historial del proyecto.</li>
+</ul>
+<h2 id="que-es-git">¿Qué es Git?</h2>
+<p>Git es un sistema de control de versiones distribuido, de código abierto y gratuito, utilizado para el seguimiento y la gestión de cambios en archivos o conjuntos de archivos.</p>
+<h3 id="beneficios-de-usar-git">Beneficios de usar Git</h3>
+<ul>
+<li>Control de versiones: Permite realizar un seguimiento de todos los cambios realizados en el proyecto.</li>
+<li>Colaboración: Permite trabajar en equipo de forma eficiente y segura.</li>
+<li>Reversibilidad: Permite volver a una versión anterior del proyecto en caso de errores.</li>
+<li>Eficiencia: Ahorra tiempo al evitar la duplicación de trabajo y la pérdida de datos.</li>
+<li>Flexibilidad: Permite trabajar con diferentes branches y realizar merges de forma sencilla.</li>
+<li>Seguridad: Protege los archivos contra la pérdida accidental o la corrupción.</li>
+</ul>
+<h3 id="flujo-de-trabajo-en-git">Flujo de trabajo en Git</h3>
+<p><a class="glightbox" href="https://neurathsboat.blog/post/git-intro/img/Git_trees.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://neurathsboat.blog/post/git-intro/img/Git_trees.png" src="https://neurathsboat.blog/post/git-intro/img/Git_trees.png" /></a></p>
+<h3 id="comandos-de-configuracion-inicial-de-git">Comandos de configuración inicial de Git</h3>
+<p>Al iniciar con Git, hay algunos comandos que puedes usar para personalizar tu experiencia y optimizar tu flujo de trabajo. Estos son algunos de los comandos más comunes para la configuración inicial:</p>
+<p>Configurar tu nombre y correo electrónico:</p>
+<ul>
+<li><code>git config --global user.name "Tu nombre completo"</code>: Establece tu nombre de usuario global.</li>
+<li><code>git config --global user.email "tucorreo@email.com"</code>: Establece tu correo electrónico global.</li>
+</ul>
+<p>Ejemplos:</p>
+<ul>
+<li>Para establecer el nombre de usuario global:</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Juan Pérez&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;juanperez@gmail.com&quot;</span>
+</code></pre></div>
+-   Para mostrar todas las configuraciones:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--list
+</code></pre></div>
+<h3 id="el-comando-git-version">El comando git --version</h3>
+<p>Se utiliza para verificar qué versión de Git está instalada.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>--version
+</code></pre></div>
+<h3 id="comandos-de-basicos-de-git">Comandos de básicos de Git</h3>
+<h4 id="git-init"><code>git init</code></h4>
+<p>Este comando crea un nuevo repositorio Git en el directorio actual. Un repositorio Git es una carpeta que contiene el historial de commits, las ramas y la configuración del proyecto.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>mi_proyecto
+<span class="nb">cd</span><span class="w"> </span>mi_proyecto
+git<span class="w"> </span>init
+</code></pre></div>
+<p>Explicación:</p>
+<ul>
+<li><code>mkdir mi_proyecto</code>: Crea una nueva carpeta llamada <code>mi_proyecto</code>.</li>
+<li><code>cd mi_proyecto</code>: Cambia el directorio actual a <code>mi_proyecto</code>.</li>
+<li><code>git init</code>: Inicializa un nuevo repositorio Git en la carpeta <code>mi_proyecto</code>.</li>
+</ul>
+<p>Resultado:</p>
+<ul>
+<li>Se crea un archivo <code>.git</code> en la carpeta <code>mi_proyecto</code>. Este archivo contiene metadatos sobre el repositorio, como el historial de commits y la configuración.</li>
+</ul>
+<h4 id="git-add"><code>git add</code></h4>
+<p>Este comando agrega archivos al área de preparación para el siguiente commit. El área de preparación es un espacio temporal donde se almacenan los cambios antes de ser confirmados en el historial del proyecto.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>archivo.txt
+</code></pre></div>
+<p>Explicación:</p>
+<ul>
+<li><code>git add archivo.txt</code>: Agrega el archivo <code>archivo.txt</code> al área de preparación.</li>
+</ul>
+<p>Resultado:</p>
+<ul>
+<li>El archivo <code>archivo.txt</code> se marca como listo para ser incluido en el siguiente commit.</li>
+</ul>
+<h4 id="git-add_1"><code>git add .</code></h4>
+<p>El comando git add . en Git se utiliza para agregar todos los archivos modificados y no rastreados en tu directorio actual al área de preparación para la siguiente confirmación (commit).</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div>
+<h4 id="git-commit"><code>git commit</code></h4>
+<p>Este comando crea un commit con los cambios del área de preparación. Un commit es una instantánea permanente del estado del proyecto en un momento determinado.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Mensaje del commit&quot;</span>
+</code></pre></div>
+<p>Explicación:</p>
+<ul>
+<li><code>git commit</code>: Crea un commit con los cambios del área de preparación.</li>
+<li><code>-m "Mensaje del commit"</code>: Especifica un mensaje que describe los cambios en el commit.</li>
+</ul>
+<p>Resultado:</p>
+<ul>
+<li>Se crea un nuevo commit en el historial del proyecto. El commit contiene los cambios que se agregaron al área de preparación.</li>
+</ul>
+<h4 id="git-commit-am"><code>git commit -am</code></h4>
+<p>El comando git commit -am "mensaje" en Git es una forma abreviada de confirmar tus cambios junto con un mensaje de confirmación. </p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;Mensaje del commit&quot;</span>
+</code></pre></div>
+<h4 id="git-clone"><code>git clone</code></h4>
+<p>Este comando clona un repositorio remoto en tu equipo local. Crea una copia del repositorio en tu computadora para que puedas trabajar en él.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://url_del_repositorio.git
+</code></pre></div>
+<p>Explicación:</p>
+<ul>
+<li><code>git clone https://url_del_repositorio.git</code>: Clona el repositorio remoto ubicado en <code>https://url_del_repositorio.git</code> en la carpeta actual.</li>
+</ul>
+<p>Resultado:</p>
+<ul>
+<li>Se crea una copia del repositorio remoto en la carpeta actual.</li>
+<li>La copia local del repositorio está sincronizada con la versión remota.</li>
+</ul>
+<h4 id="git-push"><code>git push</code></h4>
+<p>Este comando envía los cambios locales al repositorio remoto. Sube tus cambios al repositorio para que otros puedan acceder a ellos.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push
+</code></pre></div>
+<p>Explicación:</p>
+<ul>
+<li><code>git push</code>: Envía los cambios locales al repositorio remoto.</li>
+</ul>
+<p>Resultado:</p>
+<ul>
+<li>Los cambios que se han confirmado en la rama actual se envían al repositorio remoto.</li>
+<li>La versión remota del repositorio se actualiza con los cambios locales.</li>
+</ul>
+<h4 id="git-pull"><code>git pull</code></h4>
+<ul>
+<li>La versión local del repositorio se actualiza con los últimos cambios del repositorio remoto.</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull
+</code></pre></div>
+<h2 id="que-es-github">Que es Github?</h2>
+<h3 id="github-se-puede-entender-como-dos-cosas">GitHub se puede entender como dos cosas:</h3>
+<ol>
+<li>
+<p>Almacenamiento de código con control de versiones: En esencia, GitHub es una plataforma en la nube que permite a los desarrolladores alojar sus proyectos de código fuente. Funciona utilizando un sistema de control de versiones llamado Git, que realiza un seguimiento de todos los cambios realizados en el código a lo largo del tiempo. Esto permite a los desarrolladores volver a versiones anteriores del código si es necesario, y colaborar fácilmente en proyectos con otros.</p>
+</li>
+<li>
+<p>Plataforma para colaboración: GitHub va más allá del simple almacenamiento de código. Ofrece una variedad de herramientas que facilitan la colaboración entre desarrolladores. Estas herramientas incluyen:</p>
+<ul>
+<li>Control de acceso: Puedes establecer permisos para controlar quién puede ver y modificar el código de tu proyecto.</li>
+<li>Problema de seguimiento: Puedes crear y rastrear errores y tareas pendientes relacionadas con tu proyecto.</li>
+<li>Solicitudes de extracción (Pull requests): Esta función permite a los desarrolladores proponer cambios al código de un proyecto para que sean revisados y fusionados por otros colaboradores.</li>
+<li>Wikis del proyecto: Crea documentación y notas compartidas para tu proyecto.</li>
+</ul>
+</li>
+</ol>
+<h3 id="flujo-basico-de-trabajo-en-github">Flujo básico de trabajo en GitHub:</h3>
+<ol>
+<li>Clonar un repositorio: Descarga una copia del proyecto de GitHub a tu computadora.</li>
+<li>Crear una rama: Crea una nueva rama para trabajar en tu propio conjunto de cambios.</li>
+<li>Realizar cambios: Edita los archivos del proyecto y haz cambios localmente.</li>
+<li>Confirmar cambios: Guarda los cambios en tu repositorio local con un mensaje descriptivo.</li>
+<li>Subir cambios: Sube tus cambios al repositorio remoto en GitHub.</li>
+<li>Enviar una solicitud de extracción (Pull request): Propón tus cambios para que sean revisados y fusionados en la rama principal del proyecto.</li>
+</ol>
+<p>Comandos básicos en Git:</p>
+<ul>
+<li><code>git init</code>: Crea un nuevo repositorio Git en la carpeta actual.</li>
+<li><code>git clone</code>: Descarga un repositorio remoto a tu computadora.</li>
+<li><code>git add</code>: Agrega archivos al índice de Git para ser confirmados.</li>
+<li><code>git commit</code>: Guarda los cambios en el índice como un nuevo commit.</li>
+<li><code>git push</code>: Sube tus cambios al repositorio remoto.</li>
+<li><code>git pull</code>: Descarga los cambios del repositorio remoto y fusiona con tu rama local.</li>
+</ul>
+<h3 id="git-pages">Git Pages</h3>
+<p>Git Pages es una funcionalidad que ofrece GitHub para hospedar tu sitio web directamente desde tu repositorio de GitHub una referencia en español: una referencia en español sobre Git Pages. Proporciona una manera gratuita y fácil de publicar sitios web estáticos.</p>
+<p>Aquí algunos puntos clave sobre Git Pages:</p>
+<ul>
+<li><strong>Sitios web estáticos:</strong> Solo puede alojar sitios web estáticos, lo que significa que el contenido de tu sitio web está preconstruido con archivos HTML, CSS y JavaScript.</li>
+<li><strong>Flujo de trabajo simple:</strong> Los cambios que realices en los archivos de tu sitio web se reflejan en vivo en tu sitio una vez que los subas a tu repositorio de GitHub. Esto facilita mucho la implementación de actualizaciones en tu sitio web.</li>
+<li><strong>Gratuito:</strong> Git Pages es completamente gratuito para repositorios públicos. También hay planes pagos para repositorios privados.</li>
+<li><strong>Personalización:</strong> Puedes personalizar la apariencia de tu sitio web usando temas o creando tu propio HTML y CSS.</li>
+</ul>
+<h2 id="tutorial-de-manejo-de-branches-en-git-y-github">Tutorial de manejo de branches en Git y GitHub</h2>
+<p>Este tutorial te guiará en el manejo de branches en Git y GitHub, cubriendo desde lo básico hasta conceptos avanzados.</p>
+<h3 id="1-conceptos-basicos">1. Conceptos básicos</h3>
+<ul>
+<li><strong>Repositorio:</strong> Un repositorio Git es una carpeta que contiene todos los archivos de un proyecto, junto con el historial de cambios.</li>
+<li><strong>Branch:</strong> Una branch es una copia independiente del repositorio, permitiendo trabajar en nuevas funcionalidades sin afectar el código principal.</li>
+<li><strong>Master (main):</strong> La branch principal, donde se almacenan las versiones estables del proyecto.</li>
+<li><strong>Commit:</strong> Una confirmación de los cambios realizados en el repositorio, creando un punto de referencia en el historial.</li>
+</ul>
+<h3 id="2-creando-y-manejando-branches">2. Creando y manejando branches</h3>
+<p><strong>2.1 Creando una nueva branch:</strong></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;nombre_de_branch&gt;<span class="w"> </span>
+</code></pre></div>
+<p>Ejemplo: <code>git checkout -b feature-login</code> crea una nueva branch llamada "feature-login".</p>
+<p><strong>2.2 Listando las branches:</strong></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch
+</code></pre></div>
+<p><strong>2.3 Cambiando de branch:</strong></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>&lt;nombre_de_branch&gt;
+</code></pre></div>
+<p><strong>2.4 Fusionando branches:</strong></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>master
+git<span class="w"> </span>merge<span class="w"> </span>&lt;nombre_de_branch&gt;
+</code></pre></div>
+<p><strong>2.5 Eliminando una branch:</strong></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>&lt;nombre_de_branch&gt;
+</code></pre></div>
+<p><strong>2.6 Resolviendo conflictos:</strong></p>
+<p>Si las dos branches que se fusionan tienen cambios en los mismos archivos, Git mostrará un conflicto. Deberás editar el archivo manualmente y luego usar:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>&lt;archivo_conflictivo&gt;
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Resuelto conflicto en &lt;archivo&gt;&quot;</span>
+</code></pre></div>
+<h3 id="3-trabajando-con-github">3. Trabajando con GitHub</h3>
+<p><strong>3.1 Creando un repositorio en GitHub:</strong></p>
+<p>Crea un nuevo repositorio en GitHub y copia la URL.</p>
+<p><strong>3.2 Clonar el repositorio:</strong></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>&lt;URL_del_repositorio&gt;
+</code></pre></div>
+<p><strong>3.3 Push y Pull:</strong></p>
+<ul>
+<li><strong>Push:</strong>  Envía los cambios de tu branch local al repositorio remoto en GitHub.
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;nombre_de_branch&gt;
+</code></pre></div></li>
+<li><strong>Pull:</strong> Descarga los cambios del repositorio remoto a tu branch local.
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>&lt;nombre_de_branch&gt;
+</code></pre></div></li>
+</ul>
+<p><strong>3.4 Creando una Pull Request (PR):</strong></p>
+<ul>
+<li>Crea una nueva PR desde tu branch en GitHub.</li>
+<li>Describe los cambios y solicita revisión por parte de otros colaboradores.</li>
+<li>Una vez aprobada, se fusiona la PR a la branch principal.</li>
+</ul>
+<hr />
+<h2 id="tutorial-git-github-y-despliegue-en-github-pages"><strong>Tutorial: Git, GitHub y Despliegue en GitHub Pages</strong></h2>
+<h2 id="objetivo"><strong>Objetivo</strong></h2>
+<p>Aprenderás cómo:
+1. Inicializar un repositorio Git.
+2. Conectar tu proyecto local con GitHub.
+3. Hacer commits y subir cambios a GitHub.
+4. Desplegar tu proyecto web en GitHub Pages.</p>
+<hr />
+<h2 id="estructura-del-proyecto">Estructura del proyecto</h2>
+<div class="highlight"><pre><span></span><code>/proyecto-integrador
+│
+├── /src                     # Carpeta principal para el código fuente
+│   ├── /assets              # Archivos estáticos (imágenes, fuentes, etc.)
+│   │   ├── /images          # Imágenes utilizadas en el proyecto
+│   │   ├── /fonts           # Fuentes personalizadas
+│   │   └── /icons           # Iconos (SVG, PNG, etc.)
+│   │
+│   ├── /css                 # Archivos CSS
+│   │   ├── styles.css       # Estilos globales
+│   │   ├── reset.css        # Reset de estilos (opcional)
+│   │   └── pages.css        # Estilos específicos para páginas
+│   │
+│   ├── /js                  # Archivos JavaScript
+│   │   ├── main.js          # Punto de entrada principal del proyecto
+│   │   └── utils.js         # Funciones utilitarias reutilizables
+│   │
+│   ├── /pages               # Archivos HTML específicos para páginas
+│       ├── home.html        # Página de inicio
+│       └── about.html       # Página &quot;Acerca de&quot;
+│  │
+├── index.html               # Página principal del proyecto
+├── README.md                # Documentación del proyecto
+</code></pre></div>
+<h2 id="paso-1-configuracion-inicial-de-git"><strong>Paso 1: Configuración inicial de Git</strong></h2>
+<p>Antes de comenzar, asegúrate de tener instalado <strong>Git</strong> en tu computadora. Puedes descargarlo desde <a href="https://git-scm.com/">git-scm.com</a>.</p>
+<h3 id="11-verifica-la-instalacion-de-git"><strong>1.1 Verifica la instalación de Git</strong></h3>
+<p>Abre una terminal (Command Prompt, PowerShell o Terminal) y ejecuta el siguiente comando:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>--version
+</code></pre></div>
+Si ves algo como <code>git version X.XX.X</code>, significa que Git está instalado correctamente.</p>
+<h3 id="12-configura-tu-nombre-y-correo-electronico"><strong>1.2 Configura tu nombre y correo electrónico</strong></h3>
+<p>Estos datos se usarán para identificar tus commits. Ejecuta los siguientes comandos:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Tu Nombre&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;tu.correo@example.com&quot;</span>
+</code></pre></div></p>
+<hr />
+<h2 id="paso-2-crear-un-repositorio-local"><strong>Paso 2: Crear un repositorio local</strong></h2>
+<h3 id="21-navega-al-directorio-del-proyecto"><strong>2.1 Navega al directorio del proyecto</strong></h3>
+<p>Supongamos que tu proyecto está en la carpeta <code>/proyecto-web</code>. Abre la terminal y navega hasta esa carpeta:
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>ruta/a/tu/proyecto-web
+</code></pre></div></p>
+<h3 id="22-inicializa-el-repositorio"><strong>2.2 Inicializa el repositorio</strong></h3>
+<p>Ejecuta el siguiente comando para inicializar un repositorio Git en tu proyecto:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>init
+</code></pre></div>
+Esto creará una carpeta oculta llamada <code>.git</code> en tu proyecto, que almacenará todo el historial de cambios.</p>
+<hr />
+<h2 id="paso-3-crear-un-repositorio-en-github"><strong>Paso 3: Crear un repositorio en GitHub</strong></h2>
+<h3 id="31-crea-una-cuenta-en-github"><strong>3.1 Crea una cuenta en GitHub</strong></h3>
+<p>Si no tienes una cuenta, regístrate en <a href="https://github.com/">github.com</a>.</p>
+<h3 id="32-crea-un-nuevo-repositorio"><strong>3.2 Crea un nuevo repositorio</strong></h3>
+<ol>
+<li>Haz clic en el botón <strong>"New"</strong> en la página principal de GitHub.</li>
+<li>Asigna un nombre al repositorio (por ejemplo, <code>proyecto-web</code>).</li>
+<li>Deja las opciones predeterminadas (público o privado, según prefieras).</li>
+<li><strong>No inicialices el repositorio con un README</strong> porque ya lo harás localmente.</li>
+</ol>
+<hr />
+<h2 id="paso-4-conectar-el-repositorio-local-con-github"><strong>Paso 4: Conectar el repositorio local con GitHub</strong></h2>
+<h3 id="41-copia-la-url-del-repositorio"><strong>4.1 Copia la URL del repositorio</strong></h3>
+<p>En la página de tu repositorio recién creado, copia la URL HTTPS (se verá algo como <code>https://github.com/tu-usuario/proyecto-web.git</code>).</p>
+<h3 id="42-agrega-el-repositorio-remoto"><strong>4.2 Agrega el repositorio remoto</strong></h3>
+<p>En tu terminal, ejecuta el siguiente comando para conectar tu proyecto local con GitHub:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/tu-usuario/proyecto-web.git
+</code></pre></div></p>
+<hr />
+<h2 id="paso-5-realizar-tu-primer-commit"><strong>Paso 5: Realizar tu primer commit</strong></h2>
+<h3 id="51-anade-todos-los-archivos-al-area-de-preparacion"><strong>5.1 Añade todos los archivos al área de preparación</strong></h3>
+<p>Ejecuta el siguiente comando para añadir todos los archivos de tu proyecto al área de preparación:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div></p>
+<h3 id="52-realiza-el-commit"><strong>5.2 Realiza el commit</strong></h3>
+<p>Crea un commit con un mensaje descriptivo:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Primer commit: Estructura inicial del proyecto&quot;</span>
+</code></pre></div></p>
+<h3 id="53-sube-los-cambios-a-github"><strong>5.3 Sube los cambios a GitHub</strong></h3>
+<p>Sube los cambios al repositorio remoto en GitHub:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+Esto enviará tu código a la rama <code>main</code> de tu repositorio en GitHub.</p>
+<hr />
+<h2 id="paso-6-desplegar-el-proyecto-en-github-pages"><strong>Paso 6: Desplegar el proyecto en GitHub Pages</strong></h2>
+<p>GitHub Pages permite alojar sitios web directamente desde un repositorio. Sigue estos pasos:</p>
+<h3 id="61-asegurate-de-que-tu-proyecto-tenga-un-archivo-indexhtml"><strong>6.1 Asegúrate de que tu proyecto tenga un archivo <code>index.html</code></strong></h3>
+<p>El archivo <code>index.html</code> en la raíz de tu proyecto será la página principal de tu sitio web. Si usaste la estructura anterior, ya deberías tener este archivo en <code>/src/index.html</code>.</p>
+<h3 id="62-cambia-la-estructura-si-es-necesario"><strong>6.2 Cambia la estructura si es necesario</strong></h3>
+<p>GitHub Pages requiere que el archivo <code>index.html</code> esté en la raíz del repositorio. Si tu archivo está en <code>/src</code>, mueve toda la carpeta <code>/src</code> a la raíz del proyecto:
+<div class="highlight"><pre><span></span><code>mv src/* .
+</code></pre></div></p>
+<h3 id="63-activa-github-pages"><strong>6.3 Activa GitHub Pages</strong></h3>
+<ol>
+<li>Ve a la página de tu repositorio en GitHub.</li>
+<li>Haz clic en la pestaña <strong>Settings</strong> (Configuración).</li>
+<li>En el menú lateral, selecciona <strong>Pages</strong>.</li>
+<li>En la sección <strong>Source</strong>, selecciona la rama <code>main</code> y la carpeta <code>/root</code>.</li>
+<li>Haz clic en <strong>Save</strong>.</li>
+</ol>
+<p>GitHub generará automáticamente una URL para tu sitio web. Por ejemplo:
+<div class="highlight"><pre><span></span><code>https://tu-usuario.github.io/proyecto-web/
+</code></pre></div></p>
+<h3 id="64-espera-a-que-se-publique"><strong>6.4 Espera a que se publique</strong></h3>
+<p>GitHub tardará unos minutos en procesar tu sitio. Una vez listo, verás un mensaje indicando que tu sitio está publicado.</p>
+<hr />
+<h2 id="paso-7-actualizar-el-proyecto"><strong>Paso 7: Actualizar el proyecto</strong></h2>
+<p>Si realizas cambios en tu proyecto, sigue estos pasos para actualizar el repositorio y el sitio web:</p>
+<h3 id="71-anade-los-cambios"><strong>7.1 Añade los cambios</strong></h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div>
+<h3 id="72-realiza-un-commit"><strong>7.2 Realiza un commit</strong></h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Descripción de los cambios realizados&quot;</span>
+</code></pre></div>
+<h3 id="73-sube-los-cambios-a-github"><strong>7.3 Sube los cambios a GitHub</strong></h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<h3 id="74-verifica-el-sitio-actualizado"><strong>7.4 Verifica el sitio actualizado</strong></h3>
+<p>Visita la URL de GitHub Pages para ver los cambios reflejados.</p>
+<hr />
+<ol>
+<li><strong>Colabora con otros:</strong>
+   Si trabajas en equipo, usa Pull Requests en GitHub para revisar y fusionar cambios.</li>
+</ol>
+<hr />
+<h2 id="resumen-de-comandos-utiles"><strong>Resumen de comandos útiles</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git init</code></td>
+<td>Inicializa un repositorio Git.</td>
+</tr>
+<tr>
+<td><code>git add .</code></td>
+<td>Añade todos los archivos al área de preparación.</td>
+</tr>
+<tr>
+<td><code>git commit -m "mensaje"</code></td>
+<td>Guarda los cambios con un mensaje descriptivo.</td>
+</tr>
+<tr>
+<td><code>git push origin main</code></td>
+<td>Sube los cambios a la rama <code>main</code> en GitHub.</td>
+</tr>
+<tr>
+<td><code>git pull origin main</code></td>
+<td>Descarga los cambios más recientes de GitHub.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 &copy; by JFVG
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs.sticky", "navigation.tabs", "navigation.top", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../js/password-protect.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

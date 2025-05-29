@@ -1,0 +1,2262 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="jhonfvg">
+      
+      
+        <link rel="canonical" href="https://jfinfocesde.github.io/25ip/content/p8/">
+      
+      
+        <link rel="prev" href="../p7/">
+      
+      
+        <link rel="next" href="../p9/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Semana 8 - Metodología BEM y Unidades CSS: Fundamentos y Prácticas - Introducción a la Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/password-protect.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#semana-8-metodologia-bem-y-unidades-css-fundamentos-y-practicas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Introducción a la Programación" class="md-header__button md-logo" aria-label="Introducción a la Programación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Semana 8 - Metodología BEM y Unidades CSS: Fundamentos y Prácticas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Contenido
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../pi/p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Proyecto Integrador
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Programación" class="md-nav__button md-logo" aria-label="Introducción a la Programación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    Introducción a la Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Contenido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Contenido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 1 - Pacto pedagógico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 2 - Introducción a HTML5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 3 - Tablas y Etiquetas Multimedia en HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 4 - Etiquetas de Formulario en HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 5 - Fundamentación de los Sistemas de Control de Versiones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 6 - Evaluación Primer Momento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 7 - CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Semana 8 - Metodología BEM y Unidades CSS: Fundamentos y Prácticas
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Semana 8 - Metodología BEM y Unidades CSS: Fundamentos y Prácticas
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es BEM?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es BEM?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-de-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes de BEM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reglas-basicas-de-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reglas básicas de BEM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de BEM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos de BEM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1-un-boton-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo 1: Un botón simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-2-menu-de-navegacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo 2: Menú de navegación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estilos-de-codificacion-para-identificadores-en-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estilos de codificación para identificadores en CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estilos de codificación para identificadores en CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recomendación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-combinado-bem-con-estilo-de-codificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo combinado: BEM con estilo de codificación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas de BEM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unidades-absolutas-y-relativas-en-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unidades Absolutas y Relativas en CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unidades Absolutas y Relativas en CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-unidades-absolutas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Unidades Absolutas:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-unidades-relativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Unidades Relativas:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Unidades Relativas:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-usar-cada-tipo-de-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuándo usar cada tipo de unidad:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-unidades-vh-y-vw" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Unidades vh y vw:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Unidades vh y vw:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-entre-usar-las-unidades-vh-vw-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diferencias entre usar las unidades vh, vw y %
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividad-crear-una-tarjeta-reusable-con-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividad: Crear una tarjeta reusable con BEM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividad: Crear una tarjeta reusable con BEM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado esperado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-proporcionado" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML proporcionado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicaciones-paso-a-paso-para-resolver-el-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicaciones paso a paso para resolver el CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indicaciones paso a paso para resolver el CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-crea-el-archivo-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Crea el archivo CSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-estiliza-el-bloque-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Estiliza el bloque "card"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-estiliza-los-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Estiliza los elementos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-define-el-modificador-card-featured" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 4: Define el modificador "card--featured"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5-verifica-el-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 5: Verifica el resultado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-revisa-tu-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 6: Revisa tu trabajo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado final
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 9 - Propiedades de Posicionamiento en CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 10 - ¿Qué es Flexbox?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 11 - ¿Qué es CSS Grid?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 12 - Evaluación Segundo Momento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 13 - Frameworks CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 14 - Tutorial: Creando Componentes con Tailwind CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 15
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 16
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 17
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 18
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto Integrador
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto Integrador
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción Proyecto Integrador
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Herramientas CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pautas para la exposición del proyecto integrador (15 minutos)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archivo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es BEM?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es BEM?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-de-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes de BEM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reglas-basicas-de-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reglas básicas de BEM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de BEM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos de BEM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1-un-boton-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo 1: Un botón simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-2-menu-de-navegacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo 2: Menú de navegación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estilos-de-codificacion-para-identificadores-en-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estilos de codificación para identificadores en CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estilos de codificación para identificadores en CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recomendación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-combinado-bem-con-estilo-de-codificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo combinado: BEM con estilo de codificación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas de BEM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unidades-absolutas-y-relativas-en-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unidades Absolutas y Relativas en CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unidades Absolutas y Relativas en CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-unidades-absolutas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Unidades Absolutas:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-unidades-relativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Unidades Relativas:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Unidades Relativas:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-usar-cada-tipo-de-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuándo usar cada tipo de unidad:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-unidades-vh-y-vw" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Unidades vh y vw:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Unidades vh y vw:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-entre-usar-las-unidades-vh-vw-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diferencias entre usar las unidades vh, vw y %
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividad-crear-una-tarjeta-reusable-con-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividad: Crear una tarjeta reusable con BEM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividad: Crear una tarjeta reusable con BEM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado esperado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-proporcionado" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML proporcionado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicaciones-paso-a-paso-para-resolver-el-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicaciones paso a paso para resolver el CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indicaciones paso a paso para resolver el CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-crea-el-archivo-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Crea el archivo CSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-estiliza-el-bloque-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Estiliza el bloque "card"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-estiliza-los-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Estiliza los elementos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-define-el-modificador-card-featured" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 4: Define el modificador "card--featured"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5-verifica-el-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 5: Verifica el resultado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-revisa-tu-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 6: Revisa tu trabajo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado final
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="semana-8-metodologia-bem-y-unidades-css-fundamentos-y-practicas">Semana 8 - Metodología BEM y Unidades CSS: Fundamentos y Prácticas</h1>
+<h2 id="que-es-bem"><strong>¿Qué es BEM?</strong></h2>
+<p>BEM significa <strong>Block, Element, Modifier</strong> (Bloque, Elemento, Modificador). Es una metodología de nomenclatura para escribir CSS de manera más estructurada, modular y mantenible. Su objetivo es evitar conflictos de nombres y hacer que el código sea más legible y predecible.</p>
+<h4 id="componentes-de-bem"><strong>Componentes de BEM</strong></h4>
+<ol>
+<li><strong>Bloque (Block)</strong>: Es una entidad independiente, como un componente reutilizable (por ejemplo, un botón, un formulario, un menú). Se nombra con una palabra o varias unidas por guiones.</li>
+<li>
+<p>Ejemplo: <code>button</code>, <code>nav-menu</code>.</p>
+</li>
+<li>
+<p><strong>Elemento (Element)</strong>: Es una parte del bloque que no tiene sentido por sí sola fuera de ese contexto. Se nombra con el nombre del bloque seguido de dos guiones bajos (<code>__</code>) y el nombre del elemento.</p>
+</li>
+<li>
+<p>Ejemplo: <code>button__text</code>, <code>nav-menu__item</code>.</p>
+</li>
+<li>
+<p><strong>Modificador (Modifier)</strong>: Es una variación del bloque o elemento que cambia su apariencia o comportamiento. Se nombra con el nombre del bloque (o bloque + elemento) seguido de dos guiones (<code>--</code>) y el modificador.</p>
+</li>
+<li>Ejemplo: <code>button--primary</code>, <code>nav-menu__item--active</code>.</li>
+</ol>
+<hr />
+<h3 id="reglas-basicas-de-bem"><strong>Reglas básicas de BEM</strong></h3>
+<ul>
+<li>Los nombres son siempre en <strong>minúsculas</strong>.</li>
+<li>Se usan <strong>guiones</strong> (<code>-</code>) para separar palabras dentro de un mismo nivel (bloque o modificador).</li>
+<li>No se anidan selectores innecesariamente en CSS para mantener la especificidad baja.</li>
+<li>Cada bloque es independiente y no depende de otros bloques en la jerarquía del DOM.</li>
+</ul>
+<hr />
+<h3 id="ejemplos-de-bem"><strong>Ejemplos de BEM</strong></h3>
+<h4 id="ejemplo-1-un-boton-simple"><strong>Ejemplo 1: Un botón simple</strong></h4>
+<p><strong>HTML:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;button__text&quot;</span><span class="p">&gt;</span>Click me<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;button button--primary&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;button__text&quot;</span><span class="p">&gt;</span>Submit<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p><strong>CSS:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline-block</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">button__text</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">button--primary</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#007bff</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#007bff</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<ul>
+<li><code>button</code>: Bloque principal.</li>
+<li><code>button__text</code>: Elemento dentro del bloque.</li>
+<li><code>button--primary</code>: Modificador que cambia el estilo del botón.</li>
+</ul>
+<hr />
+<h4 id="ejemplo-2-menu-de-navegacion"><strong>Ejemplo 2: Menú de navegación</strong></h4>
+<p><strong>HTML:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-menu&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-menu__list&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-menu__item&quot;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-menu__item nav-menu__item--active&quot;</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-menu__item&quot;</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p><strong>CSS:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">nav-menu</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f8f8f8</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">nav-menu__list</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">nav-menu__item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline-block</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">nav-menu__item--active</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#007bff</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<ul>
+<li><code>nav-menu</code>: Bloque.</li>
+<li><code>nav-menu__list</code> y <code>nav-menu__item</code>: Elementos.</li>
+<li><code>nav-menu__item--active</code>: Modificador aplicado a un elemento.</li>
+</ul>
+<hr />
+<h3 id="estilos-de-codificacion-para-identificadores-en-css"><strong>Estilos de codificación para identificadores en CSS</strong></h3>
+<p>En CSS, los identificadores (nombres de clases o IDs) pueden seguir diferentes convenciones. Las más comunes son:</p>
+<ol>
+<li><strong>Kebab-case</strong> (recomendado con BEM):</li>
+<li>Usa guiones (<code>-</code>) para separar palabras.</li>
+<li>Ejemplo: <code>main-header</code>, <code>user-profile</code>.</li>
+<li>
+<p>BEM lo adopta por defecto: <code>block__element--modifier</code>.</p>
+</li>
+<li>
+<p><strong>CamelCase</strong>:</p>
+</li>
+<li>Usa mayúsculas para separar palabras, sin guiones ni guiones bajos.</li>
+<li>Ejemplo: <code>mainHeader</code>, <code>userProfile</code>.</li>
+<li>
+<p>No es común con BEM, pero se usa en otros contextos como JavaScript.</p>
+</li>
+<li>
+<p><strong>Snake_case</strong>:</p>
+</li>
+<li>Usa guiones bajos (<code>_</code>) para separar palabras.</li>
+<li>Ejemplo: <code>main_header</code>, <code>user_profile</code>.</li>
+<li>
+<p>Rara vez se usa en CSS moderno.</p>
+</li>
+<li>
+<p><strong>PascalCase</strong>:</p>
+</li>
+<li>Similar a CamelCase, pero la primera letra también es mayúscula.</li>
+<li>Ejemplo: <code>MainHeader</code>, <code>UserProfile</code>.</li>
+<li>Poco común en CSS.</li>
+</ol>
+<h4 id="recomendacion"><strong>Recomendación</strong></h4>
+<ul>
+<li>Con BEM, usa <strong>kebab-case</strong> porque es el estándar de la metodología y mejora la legibilidad.</li>
+<li>Evita IDs (<code>#id</code>) en CSS cuando uses BEM, ya que las clases son más flexibles y reutilizables.</li>
+</ul>
+<hr />
+<h3 id="ejemplo-combinado-bem-con-estilo-de-codificacion"><strong>Ejemplo combinado: BEM con estilo de codificación</strong></h3>
+<p>Supongamos un formulario con un campo de entrada:</p>
+<p><strong>HTML:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-login&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-login__field&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-login__input&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Usuario&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-login__button form-login__button--submit&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p><strong>CSS:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">form-login</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">form-login__field</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">form-login__input</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">form-login__button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">form-login__button--submit</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#28a745</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<ul>
+<li><strong>Bloque</strong>: <code>form-login</code>.</li>
+<li><strong>Elementos</strong>: <code>form-login__field</code>, <code>form-login__input</code>, <code>form-login__button</code>.</li>
+<li><strong>Modificador</strong>: <code>form-login__button--submit</code>.</li>
+<li><strong>Estilo de codificación</strong>: Kebab-case consistente con BEM.</li>
+</ul>
+<hr />
+<h3 id="ventajas-de-bem"><strong>Ventajas de BEM</strong></h3>
+<ul>
+<li><strong>Claridad</strong>: Sabes exactamente qué representa cada clase.</li>
+<li><strong>Reutilización</strong>: Los bloques son independientes y modulares.</li>
+<li><strong>Escalabilidad</strong>: Facilita el mantenimiento en proyectos grandes.</li>
+</ul>
+<h2 id="unidades-absolutas-y-relativas-en-css">Unidades Absolutas y Relativas en CSS</h2>
+<p>Las unidades en CSS se utilizan para especificar tamaños, distancias y otras propiedades visuales. Se pueden dividir en dos tipos principales: unidades absolutas y unidades relativas.</p>
+<h3 id="1-unidades-absolutas"><strong>1. Unidades Absolutas:</strong></h3>
+<ul>
+<li><strong>Definen un tamaño fijo, independiente del contexto.</strong> </li>
+<li><strong>No cambian de tamaño según el tamaño de la fuente o del contenedor.</strong></li>
+<li><strong>Utilizadas para elementos que necesitan un tamaño específico, como logotipos o imágenes.</strong></li>
+</ul>
+<p><strong>Ejemplos de unidades absolutas:</strong></p>
+<ul>
+<li><strong>px (píxeles):</strong> La unidad más común. Un píxel es un punto en la pantalla. </li>
+<li><strong>pt (puntos):</strong> 1 punto equivale a 1/72 de pulgada. Usada tradicionalmente en impresión.</li>
+<li><strong>in (pulgadas):</strong>  Equivale a 2.54 cm. Utilizada en diseño de impresión.</li>
+<li><strong>cm (centímetros):</strong> Equivale a 10 mm. Utilizada en diseño de impresión.</li>
+<li><strong>mm (milímetros):</strong> Equivale a 1/10 de centímetro. Utilizada en diseño de impresión.</li>
+</ul>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="wvVGwQd" data-pen-title="Unidades Absolutas" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/wvVGwQd">
+  Unidades Absolutas</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="2-unidades-relativas"><strong>2. Unidades Relativas:</strong></h3>
+<ul>
+<li><strong>Definen un tamaño que es relativo al contexto, como el tamaño de la fuente o el tamaño del contenedor.</strong></li>
+<li><strong>Adaptan su tamaño según los cambios en el contexto.</strong></li>
+<li><strong>Útiles para crear diseños flexibles y adaptables.</strong></li>
+</ul>
+<p><strong>Ejemplos de unidades relativas:</strong></p>
+<ul>
+<li><strong>em:</strong>  Relativa al tamaño de la fuente del elemento padre. 1em equivale al tamaño de la fuente actual.</li>
+<li><strong>rem:</strong> Relativa al tamaño de la fuente del elemento raíz (HTML). 1rem equivale al tamaño de fuente de <code>html</code>.</li>
+<li><strong>%:</strong>  Relativa al tamaño del contenedor padre. 100% ocupa todo el ancho del contenedor.</li>
+<li><strong>vw:</strong>  Relativa al ancho de la ventana del navegador. 1vw equivale al 1% del ancho de la ventana.</li>
+<li><strong>vh:</strong>  Relativa a la altura de la ventana del navegador. 1vh equivale al 1% de la altura de la ventana.</li>
+</ul>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="RwXabEr" data-pen-title="Unidades Relativas" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/RwXabEr">
+  Unidades Relativas</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<p><strong>Ejemplo:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c">/* Ejemplo de unidades absolutas y relativas */</span>
+<span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Tamaño de fuente absoluto en píxeles */</span>
+<span class="w">  </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span><span class="w"> </span><span class="c">/* Margen inferior relativo al tamaño de la fuente del elemento padre */</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="c">/* Ancho relativo al contenedor padre */</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Relleno absoluto en píxeles */</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">image</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Ancho absoluto en píxeles */</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Alto absoluto en píxeles */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="cuando-usar-cada-tipo-de-unidad"><strong>Cuándo usar cada tipo de unidad:</strong></h4>
+<ul>
+<li><strong>Unidades absolutas:</strong> Para elementos con un tamaño fijo, como logotipos, iconos o imágenes que deben mantener su tamaño independientemente del contexto.</li>
+<li><strong>Unidades relativas:</strong> Para diseños flexibles y adaptables, donde el tamaño de los elementos debe ajustarse según el tamaño de la fuente o del contenedor, o el tamaño de la ventana del navegador.</li>
+</ul>
+<h3 id="3-unidades-vh-y-vw"><strong>3. Unidades vh y vw:</strong></h3>
+<p>Control de diseño basado en la ventana del navegador</p>
+<p>Las unidades <code>vh</code> y <code>vw</code> en CSS se utilizan para definir tamaños y posiciones relativas al <strong>tamaño de la ventana del navegador</strong>. Son unidades muy útiles para crear diseños web responsivos y adaptables, especialmente cuando se necesita que los elementos se ajusten al tamaño de la pantalla del usuario.</p>
+<p><strong>vh (viewport height):</strong></p>
+<ul>
+<li>Define un tamaño relativo a la <strong>altura</strong> de la ventana del navegador.</li>
+<li>1vh equivale al 1% de la altura de la ventana del navegador.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">vh</span><span class="p">;</span><span class="w"> </span><span class="c">/* La altura del contenedor será el 50% de la altura de la ventana del navegador */</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>vw (viewport width):</strong></p>
+<ul>
+<li>Define un tamaño relativo al <strong>ancho</strong> de la ventana del navegador.</li>
+<li>1vw equivale al 1% del ancho de la ventana del navegador.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">image</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">vw</span><span class="p">;</span><span class="w"> </span><span class="c">/* El ancho de la imagen será el 30% del ancho de la ventana del navegador */</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Beneficios de usar vh y vw:</strong></p>
+<ul>
+<li><strong>Diseño responsivo:</strong>  Los elementos se adaptan automáticamente al tamaño de la pantalla del usuario, lo que crea una experiencia web más fluida en diferentes dispositivos.</li>
+<li><strong>Flexibilidad:</strong>  Permiten crear diseños dinámicos que se ajustan al tamaño de la ventana del navegador, sin necesidad de utilizar consultas de medios (media queries).</li>
+<li><strong>Facilidad de uso:</strong>  Son fáciles de entender y usar en comparación con otras unidades relativas.</li>
+</ul>
+<p><strong>Ejemplos de uso:</strong></p>
+<ul>
+<li><strong>Establecer la altura de un encabezado o pie de página:</strong>  <code>header { height: 10vh; }</code></li>
+<li><strong>Ajustar el tamaño de una imagen o video:</strong>  <code>img { width: 50vw; }</code></li>
+<li><strong>Controlar el espacio entre elementos:</strong>  <code>margin-bottom: 5vh;</code></li>
+<li><strong>Crear diseños de columnas flexibles:</strong>  <code>div { width: 25vw; }</code></li>
+</ul>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="RwXabEr" data-pen-title="Unidades Relativas" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/RwXabEr">
+  Unidades Relativas</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h4 id="diferencias-entre-usar-las-unidades-vh-vw-y">Diferencias entre usar las unidades vh, vw y %</h4>
+<p>Las unidades <code>vh</code>, <code>vw</code> y <code>%</code> son todas unidades relativas en CSS que se usan para definir tamaños y posiciones basados en el contexto. Aunque pueden parecer similares, existen diferencias importantes en su comportamiento y aplicaciones:</p>
+<p><strong>vh (viewport height):</strong></p>
+<ul>
+<li><strong>Se basa en la altura de la ventana del navegador.</strong></li>
+<li><strong>1vh equivale al 1% de la altura de la ventana del navegador.</strong></li>
+<li><strong>Ideal para:</strong><ul>
+<li>Establecer alturas de elementos que deben ocupar una parte proporcional de la altura de la ventana, como encabezados o pies de página.</li>
+<li>Crear diseños que se ajusten a la altura de la pantalla, como diseños de una sola página.</li>
+<li>Adaptar el espacio entre elementos basados en la altura de la ventana.</li>
+</ul>
+</li>
+</ul>
+<p><strong>vw (viewport width):</strong></p>
+<ul>
+<li><strong>Se basa en el ancho de la ventana del navegador.</strong></li>
+<li><strong>1vw equivale al 1% del ancho de la ventana del navegador.</strong></li>
+<li><strong>Ideal para:</strong><ul>
+<li>Establecer anchos de elementos que deben ocupar una parte proporcional del ancho de la ventana, como columnas o imágenes.</li>
+<li>Adaptar el espacio entre elementos basados en el ancho de la ventana.</li>
+<li>Crear diseños de columnas flexibles que se ajusten al ancho de la pantalla.</li>
+</ul>
+</li>
+</ul>
+<p><strong>% (Porcentaje):</strong></p>
+<ul>
+<li><strong>Se basa en el tamaño del elemento padre.</strong></li>
+<li><strong>100% equivale al 100% del tamaño del elemento padre.</strong></li>
+<li><strong>Ideal para:</strong><ul>
+<li>Establecer el ancho o alto de un elemento como una fracción del tamaño de su contenedor padre.</li>
+<li>Crear diseños flexibles que se ajustan al tamaño del contenedor padre.</li>
+<li>Adaptar el relleno o margen de un elemento al tamaño de su contenedor padre.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Diferencias Clave:</strong></p>
+<ul>
+<li><strong>Punto de referencia:</strong> <code>vh</code> y <code>vw</code> se basan en el tamaño de la ventana del navegador, mientras que <code>%</code> se basa en el tamaño del elemento padre.</li>
+<li><strong>Escalabilidad:</strong>  <code>vh</code> y <code>vw</code> se ajustan al tamaño de la ventana del navegador, mientras que <code>%</code> se ajusta al tamaño del elemento padre.</li>
+<li><strong>Aplicaciones:</strong> <code>vh</code> y <code>vw</code> son ideales para diseños responsivos que se adaptan al tamaño de la pantalla del usuario, mientras que <code>%</code> es útil para crear diseños flexibles que se ajusten al tamaño del contenedor padre.</li>
+</ul>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="GRVZKbN" data-pen-title="Diferencias entre usar las unidades vh, vw y %" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/GRVZKbN">
+  Diferencias entre usar las unidades vh, vw y %</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<hr />
+<h3 id="actividad-crear-una-tarjeta-reusable-con-bem"><strong>Actividad: Crear una tarjeta reusable con BEM</strong></h3>
+<h4 id="objetivo"><strong>Objetivo</strong></h4>
+<p>Estilizar un componente de tarjeta que incluye una imagen, un título y un botón, usando la metodología BEM para nombrar las clases en CSS.</p>
+<h4 id="resultado-esperado"><strong>Resultado esperado</strong></h4>
+<p>Dos tarjetas en la página: una con un diseño básico y otra con una variante destacada, estilizadas con CSS siguiendo BEM.</p>
+<hr />
+<h3 id="html-proporcionado"><strong>HTML proporcionado</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Actividad BEM - Tarjeta<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;styles.css&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="cm">&lt;!-- Tarjeta estándar --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card__image&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://via.placeholder.com/300x200&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen de ejemplo&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card__title&quot;</span><span class="p">&gt;</span>Tarjeta Estándar<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card__button&quot;</span><span class="p">&gt;</span>Ver más<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="cm">&lt;!-- Tarjeta con modificador --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card card--featured&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card__image&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://via.placeholder.com/300x200&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen destacada&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card__title&quot;</span><span class="p">&gt;</span>Tarjeta Destacada<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card__button&quot;</span><span class="p">&gt;</span>Ver más<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="indicaciones-paso-a-paso-para-resolver-el-css"><strong>Indicaciones paso a paso para resolver el CSS</strong></h3>
+<h4 id="paso-1-crea-el-archivo-css"><strong>Paso 1: Crea el archivo CSS</strong></h4>
+<ol>
+<li>Crea un archivo llamado "styles.css" en la misma carpeta que el HTML.</li>
+<li>Prepárate para estilizar el bloque, los elementos y el modificador usando la metodología BEM.</li>
+</ol>
+<hr />
+<h4 id="paso-2-estiliza-el-bloque-card"><strong>Paso 2: Estiliza el bloque "card"</strong></h4>
+<ol>
+<li>Define estilos básicos para la clase "card":</li>
+<li>Establece un ancho fijo (por ejemplo, 300 píxeles).</li>
+<li>Añade un borde visible (como 1 píxel sólido de color gris).</li>
+<li>Incluye espaciado interno (padding) y externo (margin).</li>
+<li>Asegúrate de que las tarjetas se muestren en línea (usa display inline-block o similar).</li>
+</ol>
+<hr />
+<h4 id="paso-3-estiliza-los-elementos"><strong>Paso 3: Estiliza los elementos</strong></h4>
+<ol>
+<li>Para la clase "card__image":</li>
+<li>Haz que la imagen ocupe todo el ancho del contenedor.</li>
+<li>Redondea las esquinas ligeramente.</li>
+<li>Para la clase "card__title":</li>
+<li>Define un tamaño de fuente legible (como 20 píxeles).</li>
+<li>Añade un color oscuro y algo de margen superior e inferior.</li>
+<li>Para la clase "card__button":</li>
+<li>Establece un color de fondo (como azul).</li>
+<li>Usa texto blanco, un borde redondeado y un tamaño de padding cómodo.</li>
+</ol>
+<hr />
+<h4 id="paso-4-define-el-modificador-card-featured"><strong>Paso 4: Define el modificador "card--featured"</strong></h4>
+<ol>
+<li>Añade estilos para la clase "card--featured":</li>
+<li>Cambia el color del borde (por ejemplo, a naranja).</li>
+<li>Modifica el fondo para que sea diferente (como un tono claro).</li>
+<li>Ajusta los elementos dentro de la tarjeta destacada si es necesario:</li>
+<li>Cambia el color del título para que combine con el modificador.</li>
+<li>Modifica el color del botón para que sea coherente con el diseño destacado.</li>
+</ol>
+<hr />
+<h4 id="paso-5-verifica-el-resultado"><strong>Paso 5: Verifica el resultado</strong></h4>
+<ol>
+<li>Guarda el archivo CSS y abre el HTML en un navegador.</li>
+<li>Confirma que:</li>
+<li>La primera tarjeta tiene un diseño básico (borde gris, botón azul, etc.).</li>
+<li>La segunda tarjeta muestra la variante destacada (borde y fondo diferentes).</li>
+<li>Asegúrate de que la imagen, el título y el botón estén bien alineados en ambas tarjetas.</li>
+</ol>
+<hr />
+<h4 id="paso-6-revisa-tu-trabajo"><strong>Paso 6: Revisa tu trabajo</strong></h4>
+<ol>
+<li>Verifica que las clases sigan BEM:</li>
+<li>Bloque: "card".</li>
+<li>Elementos: "card__image", "card__title", "card__button".</li>
+<li>Modificador: "card--featured".</li>
+<li>Asegúrate de que el diseño sea claro y las dos tarjetas se diferencien visualmente.</li>
+</ol>
+<hr />
+<h3 id="resultado-final"><strong>Resultado final</strong></h3>
+<p>Deberás tener un archivo "styles.css" que estilice las dos tarjetas del HTML: una básica y otra destacada, usando nombres de clases según BEM y estilos que las hagan funcionales y atractivas. ¡Manos a la obra!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 &copy; by JFVG
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs.sticky", "navigation.tabs", "navigation.top", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../js/password-protect.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

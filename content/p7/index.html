@@ -1,0 +1,2203 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="jhonfvg">
+      
+      
+        <link rel="canonical" href="https://jfinfocesde.github.io/25ip/content/p7/">
+      
+      
+        <link rel="prev" href="../p6/">
+      
+      
+        <link rel="next" href="../p8/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Semana 7 - CSS - Introducción a la Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/password-protect.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#semana-7-css" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Introducción a la Programación" class="md-header__button md-logo" aria-label="Introducción a la Programación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Semana 7 - CSS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Contenido
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../pi/p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Proyecto Integrador
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Programación" class="md-nav__button md-logo" aria-label="Introducción a la Programación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    Introducción a la Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Contenido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Contenido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 1 - Pacto pedagógico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 2 - Introducción a HTML5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 3 - Tablas y Etiquetas Multimedia en HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 4 - Etiquetas de Formulario en HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 5 - Fundamentación de los Sistemas de Control de Versiones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 6 - Evaluación Primer Momento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Semana 7 - CSS
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Semana 7 - CSS
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-de-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones de CSS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sintaxis-de-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis de CSS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso de CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css-inline" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS inline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css-interno" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS interno
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css-externo" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS externo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectores-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selectores CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selectores-de-etiqueta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores de etiqueta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectores-de-identificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores de identificación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectores-de-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores de clase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectores-de-jerarquia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores de jerarquía
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-atributos-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de Atributos CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de Atributos CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-atributos-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Atributos de Texto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-atributos-de-fondo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Atributos de Fondo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-atributos-de-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Atributos de Dimensión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-atributos-de-posicionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Atributos de Posicionamiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-atributos-de-borde" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Atributos de Borde
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-atributos-de-visualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Atributos de Visualización
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-atributos-de-flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Atributos de Flexbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-atributos-de-transicion-y-animacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Atributos de Transición y Animación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuente-oficiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fuente oficiales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividad-pon-a-prueba-tus-conocimientos-de-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividad: ¡Pon a Prueba tus Conocimientos de CSS!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividad: ¡Pon a Prueba tus Conocimientos de CSS!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-analiza-y-prueba-revisa-cuidadosamente-cada-uno-de-los-ejemplos-de-la-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Analiza y Prueba: Revisa cuidadosamente cada uno de los ejemplos de la sesión.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-experimenta-en-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Experimenta en Visual Studio Code:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 8 - Metodología BEM y Unidades CSS: Fundamentos y Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 9 - Propiedades de Posicionamiento en CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 10 - ¿Qué es Flexbox?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 11 - ¿Qué es CSS Grid?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 12 - Evaluación Segundo Momento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 13 - Frameworks CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 14 - Tutorial: Creando Componentes con Tailwind CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 15
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 16
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 17
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 18
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto Integrador
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto Integrador
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción Proyecto Integrador
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Herramientas CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pautas para la exposición del proyecto integrador (15 minutos)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archivo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-de-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones de CSS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sintaxis-de-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis de CSS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso de CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css-inline" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS inline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css-interno" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS interno
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css-externo" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS externo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectores-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selectores CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selectores-de-etiqueta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores de etiqueta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectores-de-identificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores de identificación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectores-de-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores de clase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectores-de-jerarquia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores de jerarquía
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-atributos-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de Atributos CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de Atributos CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-atributos-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Atributos de Texto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-atributos-de-fondo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Atributos de Fondo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-atributos-de-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Atributos de Dimensión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-atributos-de-posicionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Atributos de Posicionamiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-atributos-de-borde" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Atributos de Borde
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-atributos-de-visualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Atributos de Visualización
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-atributos-de-flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Atributos de Flexbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-atributos-de-transicion-y-animacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Atributos de Transición y Animación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuente-oficiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fuente oficiales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividad-pon-a-prueba-tus-conocimientos-de-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividad: ¡Pon a Prueba tus Conocimientos de CSS!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividad: ¡Pon a Prueba tus Conocimientos de CSS!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-analiza-y-prueba-revisa-cuidadosamente-cada-uno-de-los-ejemplos-de-la-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Analiza y Prueba: Revisa cuidadosamente cada uno de los ejemplos de la sesión.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-experimenta-en-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Experimenta en Visual Studio Code:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="semana-7-css">Semana 7 - CSS</h1>
+<p>CSS, o Cascading Style Sheets, es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado, como HTML o XML. CSS se utiliza para dar estilo a las páginas web, por ejemplo, alterando la fuente, color, tamaño y espaciado del contenido, dividiendo el contenido en múltiples columnas o agregando animaciones y otras características decorativas.</p>
+<p>CSS es un lenguaje de hojas de estilo que se utiliza para describir cómo se mostrará un documento HTML. CSS se aplica a un documento HTML en forma de hojas de estilo. Una hoja de estilo CSS es un archivo de texto que contiene instrucciones sobre cómo se debe mostrar un documento HTML.</p>
+<p>CSS es un lenguaje poderoso que se puede utilizar para crear diseños web muy complejos y sofisticados. Con un buen conocimiento de CSS, puede crear páginas web que sean atractivas, informativas y fáciles de usar.</p>
+<h2 id="funciones-de-css">Funciones de CSS</h2>
+<p>CSS tiene una serie de funciones, entre las que se incluyen:</p>
+<ul>
+<li>Controlar el aspecto de los elementos HTML: CSS se puede utilizar para cambiar el aspecto de los elementos HTML, como su color, tamaño, fuente y posición.</li>
+<li>Crear layouts: CSS se puede utilizar para crear layouts de páginas web, como columnas, filas y tablas.</li>
+<li>Agregar efectos: CSS se puede utilizar para agregar efectos a las páginas web, como animaciones, transiciones y sombras.</li>
+<li>Soportar dispositivos móviles: CSS se puede utilizar para crear páginas web que se vean bien en dispositivos móviles.</li>
+</ul>
+<h2 id="sintaxis-de-css">Sintaxis de CSS</h2>
+<p>La sintaxis de CSS es relativamente simple. Las reglas CSS se componen de dos partes: una selector y una declaración.</p>
+<p>El selector identifica los elementos HTML a los que se aplicará la regla. El declaración especifica el estilo que se aplicará a los elementos seleccionados.</p>
+<p>Por ejemplo, la siguiente regla CSS cambiará el color de todos los elementos <code>&lt;h1&gt;</code> a rojo:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En este caso, el selector es h1 y la declaración es color: red.</p>
+<p>CSS vs. HTML</p>
+<p>HTML y CSS son dos lenguajes diferentes que se utilizan para crear páginas web. HTML es un lenguaje de marcado que se utiliza para estructurar el contenido de una página web. CSS es un lenguaje de diseño gráfico que se utiliza para dar estilo a la página web.</p>
+<p>HTML y CSS trabajan juntos para crear páginas web. HTML proporciona la estructura y el contenido de la página web, mientras que CSS proporciona el estilo.</p>
+<h2 id="uso-de-css">Uso de CSS</h2>
+<p>CSS se puede usar de varias maneras. Puede agregar CSS a su documento HTML de forma inline, interna o externa.</p>
+<h3 id="css-inline">CSS inline</h3>
+<p>CSS inline es un tipo de CSS que se aplica a un elemento HTML individual. Se utiliza agregando el atributo style al elemento HTML. El atributo style contiene una lista de propiedades CSS y sus valores.</p>
+<p>Por ejemplo, el siguiente código aplica CSS inline a un elemento <code>&lt;h1&gt;</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: red;&quot;</span><span class="p">&gt;</span>Este es un título<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En este caso, el CSS inline cambiará el color del elemento <code>&lt;h1&gt;</code> a rojo.</p>
+<p>CSS inline es útil para aplicar estilos únicos a elementos HTML individuales. Sin embargo, no se recomienda usar CSS inline para aplicar estilos a todos los elementos de un tipo determinado. En su lugar, se recomienda usar CSS interno o CSS externo para aplicar estilos globales.</p>
+<p>Aquí hay algunos ejemplos de cómo usar CSS inline:</p>
+<p>Para aplicar un color de fondo a un párrafo:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background-color: blue;&quot;</span><span class="p">&gt;</span>Este es un párrafo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Para aplicar un estilo de borde a una imagen:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;mi-imagen.jpg&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;border: 1px solid black;&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Para aplicar un efecto de sombra a un encabezado:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);&quot;</span><span class="p">&gt;</span>Este es un encabezado<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="NWQNKqN" data-pen-title="CSS inline" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/NWQNKqN">
+  CSS inline</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="css-interno">CSS interno</h3>
+<p>El CSS interno se agrega directamente al documento HTML. El CSS interno se coloca entre las etiquetas <code>&lt;style&gt;</code> y <code>&lt;/style&gt;</code>.</p>
+<p>Por ejemplo, el siguiente código agrega CSS interno a un documento HTML:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi página web<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Este es un título<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En este caso, el CSS interno cambia el color de todos los elementos <code>&lt;h1&gt;</code> a rojo.</p>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="ZEgWzJr" data-pen-title="CSS interno" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/ZEgWzJr">
+  CSS interno</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="css-externo">CSS externo</h3>
+<p>El CSS externo se almacena en un archivo separado del documento HTML. El archivo de CSS se vincula al documento HTML mediante la etiqueta <code>&lt;link&gt;</code>.</p>
+<p>Por ejemplo, el siguiente código vincula un archivo de CSS externo a un documento HTML:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi página web<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;mi-estilo.css&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Este es un título<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En este caso, el archivo de CSS externo mi-estilo.css se vincula al documento HTML. El CSS externo cambiará el color de todos los elementos <code>&lt;h1&gt;</code> a rojo.</p>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MWNygEQ" data-pen-title="CSS externo" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/MWNygEQ">
+  CSS externo</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h2 id="selectores-css">Selectores CSS</h2>
+<p>Los selectores CSS son patrones que se utilizan para seleccionar los elementos HTML a los que se desea aplicar un estilo. Hay muchos tipos diferentes de selectores CSS, cada uno con su propia sintaxis y utilidad.</p>
+<h3 id="selectores-de-etiqueta">Selectores de etiqueta</h3>
+<p>Los selectores de etiqueta se utilizan para seleccionar todos los elementos de un tipo determinado. La sintaxis es simplemente el nombre de la etiqueta HTML. Por ejemplo, el siguiente selector seleccionaría todos los elementos <code>&lt;h1&gt;</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este selector aplicaría el estilo color: red a todos los elementos <code>&lt;h1&gt;</code> de la página web.</p>
+<p>Ejemplo HTML:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi página web<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Este es un título<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un párrafo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJKNLzX" data-pen-title="Selectores de etiqueta" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/OJKNLzX">
+  Selectores de etiqueta</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="selectores-de-identificacion">Selectores de identificación</h3>
+<p>Los selectores de identificación se utilizan para seleccionar elementos HTML en función de su identificador. Los identificadores son atributos HTML que se utilizan para identificar elementos específicos. La sintaxis de un selector de identificación es el símbolo de hash (#) seguido del identificador del elemento.</p>
+<p>Ejemplos</p>
+<p>El siguiente selector seleccionaría el elemento con el identificador mi-id:</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">#</span><span class="nn">mi-id</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Los selectores de identificación son muy útiles para seleccionar elementos específicos. Se pueden utilizar para aplicar estilos a elementos individuales o a grupos de elementos.</p>
+<p>Ejemplo HTML</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi página web<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">#</span><span class="nn">mi-id</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mi-id&quot;</span><span class="p">&gt;</span>Este es un título<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un párrafo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="VwoaZyo" data-pen-title="Selectores de identificación" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/VwoaZyo">
+  Selectores de identificación</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="selectores-de-clase">Selectores de clase</h3>
+<p>Los selectores de clase se utilizan para seleccionar todos los elementos que tienen una clase específica. La sintaxis es el punto (.) seguido del nombre de la clase. Por ejemplo, el siguiente selector seleccionaría todos los elementos que tengan la clase mi-clase:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">mi-clase</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este selector aplicaría el estilo font-size: 20px a todos los elementos que tengan la clase mi-clase de la página web.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi página web<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">mi-clase</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mi-clase&quot;</span><span class="p">&gt;</span>Este es un título<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mi-clase&quot;</span><span class="p">&gt;</span>Este es un párrafo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="eYqZOVK" data-pen-title="Selectores de clase" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/eYqZOVK">
+  Selectores de clase</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="selectores-de-jerarquia">Selectores de jerarquía</h3>
+<p>Los selectores de jerarquía en CSS te permiten apuntar a elementos HTML basados en su relación con otros elementos en el árbol DOM (Document Object Model). Estos selectores te dan un control más preciso sobre tu diseño, permitiéndote aplicar estilos específicos a elementos que se encuentran en un contexto particular.</p>
+<p><strong>Tipos de Selectores de Jerarquía:</strong></p>
+<ol>
+<li>
+<p><strong>Hijo Directo (&gt;)</strong></p>
+<ul>
+<li>Selecciona el elemento hijo directo de otro elemento.</li>
+<li><strong>Ejemplo:</strong> <code>div &gt; p</code> selecciona todos los elementos <code>&lt;p&gt;</code> que son hijos directos de un elemento <code>&lt;div&gt;</code>.</li>
+<li><strong>No selecciona:</strong> Los elementos <code>&lt;p&gt;</code> que son descendientes indirectos (nietos, bisnietos, etc.) del elemento <code>&lt;div&gt;</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Descendiente ( )</strong></p>
+<ul>
+<li>Selecciona cualquier elemento que sea descendiente de otro elemento, a cualquier nivel de profundidad.</li>
+<li><strong>Ejemplo:</strong> <code>div p</code> selecciona todos los elementos <code>&lt;p&gt;</code> que se encuentran dentro de un elemento <code>&lt;div&gt;</code>, sin importar el nivel de anidamiento.</li>
+<li><strong>Selecciona:</strong> Los elementos <code>&lt;p&gt;</code> que son hijos directos, nietos, bisnietos, etc. del elemento <code>&lt;div&gt;</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hermano Adyacente (+)</strong></p>
+<ul>
+<li>Selecciona el elemento que es el siguiente hermano adyacente del elemento actual.</li>
+<li><strong>Ejemplo:</strong> <code>h2 + p</code> selecciona el elemento <code>&lt;p&gt;</code> que está inmediatamente después de un elemento <code>&lt;h2&gt;</code>.</li>
+<li><strong>No selecciona:</strong> Elementos <code>&lt;p&gt;</code> que no sean el hermano adyacente inmediato.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hermano General (~)</strong></p>
+<ul>
+<li>Selecciona todos los hermanos siguientes del elemento actual, sin importar la posición relativa.</li>
+<li><strong>Ejemplo:</strong> <code>h2 ~ p</code> selecciona todos los elementos <code>&lt;p&gt;</code> que están después de un elemento <code>&lt;h2&gt;</code>, incluso si hay otros elementos entre ellos.</li>
+<li><strong>Selecciona:</strong> Todos los elementos <code>&lt;p&gt;</code> que compartan el mismo padre que el elemento <code>&lt;h2&gt;</code>, pero que estén después de él en el orden del DOM.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Ejemplos:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de Selectores de Jerarquía<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="c">/* Hijo Directo */</span>
+<span class="w">    </span><span class="nt">div</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* Descendiente */</span>
+<span class="w">    </span><span class="nt">ul</span><span class="w"> </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* Hermano Adyacente */</span>
+<span class="w">    </span><span class="nt">h2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* Hermano General */</span>
+<span class="w">    </span><span class="nt">h1</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Título principal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Párrafo dentro de div<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Otro párrafo dentro de div<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento de lista 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento de lista 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Subtítulo<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Párrafo después de h2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Otro párrafo después de h2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Párrafo después de h1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="QWeNLrM" data-pen-title="Selectores de Jerarquía" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/QWeNLrM">
+  Selectores de Jerarquía</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h2 id="tipos-de-atributos-css">Tipos de Atributos CSS</h2>
+<h3 id="1-atributos-de-texto">1. Atributos de Texto</h3>
+<ul>
+<li><code>color</code>: Define el color del texto
+  <div class="highlight"><pre><span></span><code><span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="nt">red</span><span class="o">;</span>
+<span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">FF0000</span><span class="o">;</span>
+<span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="nt">rgb</span><span class="o">(</span><span class="nt">255</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="o">);</span>
+</code></pre></div></li>
+<li><code>font-family</code>: Define la fuente del texto
+  <div class="highlight"><pre><span></span><code><span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="nt">Arial</span><span class="o">,</span><span class="w"> </span><span class="nt">sans-serif</span><span class="o">;</span>
+</code></pre></div></li>
+<li><code>font-size</code>: Define el tamaño del texto
+  <div class="highlight"><pre><span></span><code><span class="nt">font-size</span><span class="o">:</span><span class="w"> </span><span class="nt">16px</span><span class="o">;</span>
+<span class="nt">font-size</span><span class="o">:</span><span class="w"> </span><span class="nt">1</span><span class="p">.</span><span class="nc">2em</span><span class="o">;</span>
+<span class="nt">font-size</span><span class="o">:</span><span class="w"> </span><span class="nt">2rem</span><span class="o">;</span>
+</code></pre></div></li>
+<li><code>font-weight</code>: Define el grosor del texto
+  <div class="highlight"><pre><span></span><code><span class="nt">font-weight</span><span class="o">:</span><span class="w"> </span><span class="nt">bold</span><span class="o">;</span>
+<span class="nt">font-weight</span><span class="o">:</span><span class="w"> </span><span class="nt">700</span><span class="o">;</span>
+</code></pre></div></li>
+<li><code>text-align</code>: Define la alineación del texto
+  <div class="highlight"><pre><span></span><code><span class="nt">text-align</span><span class="o">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<span class="nt">text-align</span><span class="o">:</span><span class="w"> </span><span class="nt">left</span><span class="o">;</span>
+<span class="nt">text-align</span><span class="o">:</span><span class="w"> </span><span class="nt">right</span><span class="o">;</span>
+</code></pre></div></li>
+</ul>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="abeNbYv" data-pen-title="Atributos de Texto" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/abeNbYv">
+  Atributos de Texto</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="2-atributos-de-fondo">2. Atributos de Fondo</h3>
+<ul>
+<li><code>background-color</code>: Color de fondo
+  <div class="highlight"><pre><span></span><code><span class="nt">background-color</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">f0f0f0</span><span class="o">;</span>
+</code></pre></div></li>
+<li><code>background-image</code>: Imagen de fondo
+  <div class="highlight"><pre><span></span><code><span class="nt">background-image</span><span class="o">:</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;imagen.jpg&#39;</span><span class="o">);</span>
+</code></pre></div></li>
+<li><code>background-size</code>: Tamaño del fondo
+  <div class="highlight"><pre><span></span><code><span class="nt">background-size</span><span class="o">:</span><span class="w"> </span><span class="nt">cover</span><span class="o">;</span>
+<span class="nt">background-size</span><span class="o">:</span><span class="w"> </span><span class="nt">contain</span><span class="o">;</span>
+</code></pre></div></li>
+</ul>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="mdNPdLB" data-pen-title="Atributos de Fondo" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/mdNPdLB">
+  Atributos de Fondo</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="3-atributos-de-dimension">3. Atributos de Dimensión</h3>
+<ul>
+<li><code>width</code>: Ancho del elemento
+  <div class="highlight"><pre><span></span><code><span class="nt">width</span><span class="o">:</span><span class="w"> </span><span class="nt">100px</span><span class="o">;</span>
+<span class="nt">width</span><span class="o">:</span><span class="w"> </span><span class="nt">50</span><span class="o">%;</span>
+</code></pre></div></li>
+<li><code>height</code>: Alto del elemento
+  <div class="highlight"><pre><span></span><code><span class="nt">height</span><span class="o">:</span><span class="w"> </span><span class="nt">200px</span><span class="o">;</span>
+<span class="nt">height</span><span class="o">:</span><span class="w"> </span><span class="nt">100vh</span><span class="o">;</span>
+</code></pre></div></li>
+<li><code>margin</code>: Margen exterior
+  <div class="highlight"><pre><span></span><code><span class="nt">margin</span><span class="o">:</span><span class="w"> </span><span class="nt">10px</span><span class="o">;</span>
+<span class="nt">margin</span><span class="o">:</span><span class="w"> </span><span class="nt">10px</span><span class="w"> </span><span class="nt">20px</span><span class="o">;</span>
+</code></pre></div></li>
+<li><code>padding</code>: Relleno interior
+  <div class="highlight"><pre><span></span><code><span class="nt">padding</span><span class="o">:</span><span class="w"> </span><span class="nt">15px</span><span class="o">;</span>
+<span class="nt">padding</span><span class="o">:</span><span class="w"> </span><span class="nt">10px</span><span class="w"> </span><span class="nt">20px</span><span class="w"> </span><span class="nt">15px</span><span class="w"> </span><span class="nt">25px</span><span class="o">;</span>
+</code></pre></div></li>
+</ul>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="xxvVxzZ" data-pen-title="Atributos de Dimensión" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/xxvVxzZ">
+  Atributos de Dimensión</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="4-atributos-de-posicionamiento">4. Atributos de Posicionamiento</h3>
+<ul>
+<li><code>position</code>: Tipo de posicionamiento
+  <div class="highlight"><pre><span></span><code><span class="nt">position</span><span class="o">:</span><span class="w"> </span><span class="nt">relative</span><span class="o">;</span>
+<span class="nt">position</span><span class="o">:</span><span class="w"> </span><span class="nt">absolute</span><span class="o">;</span>
+<span class="nt">position</span><span class="o">:</span><span class="w"> </span><span class="nt">fixed</span><span class="o">;</span>
+</code></pre></div></li>
+<li><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>: Posición
+  <div class="highlight"><pre><span></span><code><span class="nt">top</span><span class="o">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<span class="nt">left</span><span class="o">:</span><span class="w"> </span><span class="nt">50</span><span class="o">%;</span>
+</code></pre></div></li>
+<li><code>z-index</code>: Orden de apilamiento
+  <div class="highlight"><pre><span></span><code><span class="nt">z-index</span><span class="o">:</span><span class="w"> </span><span class="nt">1</span><span class="o">;</span>
+<span class="nt">z-index</span><span class="o">:</span><span class="w"> </span><span class="nt">999</span><span class="o">;</span>
+</code></pre></div></li>
+</ul>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="BaXKaVx" data-pen-title="Atributos de Posicionamiento" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/BaXKaVx">
+  Atributos de Posicionamiento</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="5-atributos-de-borde">5. Atributos de Borde</h3>
+<ul>
+<li><code>border</code>: Borde completo
+  <div class="highlight"><pre><span></span><code><span class="nt">border</span><span class="o">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nt">black</span><span class="o">;</span>
+</code></pre></div></li>
+<li><code>border-radius</code>: Redondeo de esquinas
+  <div class="highlight"><pre><span></span><code><span class="nt">border-radius</span><span class="o">:</span><span class="w"> </span><span class="nt">5px</span><span class="o">;</span>
+<span class="nt">border-radius</span><span class="o">:</span><span class="w"> </span><span class="nt">50</span><span class="o">%;</span>
+</code></pre></div></li>
+</ul>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="zYgqYLG" data-pen-title="Atributos de Borde" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/zYgqYLG">
+  Atributos de Borde</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="6-atributos-de-visualizacion">6. Atributos de Visualización</h3>
+<ul>
+<li><code>display</code>: Tipo de visualización
+  <div class="highlight"><pre><span></span><code><span class="nt">display</span><span class="o">:</span><span class="w"> </span><span class="nt">block</span><span class="o">;</span>
+<span class="nt">display</span><span class="o">:</span><span class="w"> </span><span class="nt">inline</span><span class="o">;</span>
+<span class="nt">display</span><span class="o">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<span class="nt">display</span><span class="o">:</span><span class="w"> </span><span class="nt">grid</span><span class="o">;</span>
+</code></pre></div></li>
+<li><code>visibility</code>: Visibilidad
+  <div class="highlight"><pre><span></span><code><span class="nt">visibility</span><span class="o">:</span><span class="w"> </span><span class="nt">hidden</span><span class="o">;</span>
+<span class="nt">visibility</span><span class="o">:</span><span class="w"> </span><span class="nt">visible</span><span class="o">;</span>
+</code></pre></div></li>
+<li><code>opacity</code>: Transparencia
+  <div class="highlight"><pre><span></span><code><span class="nt">opacity</span><span class="o">:</span><span class="w"> </span><span class="nt">0</span><span class="p">.</span><span class="nc">5</span><span class="o">;</span>
+</code></pre></div></li>
+</ul>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="PoMNoBR" data-pen-title="Atributos de Visualización" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/PoMNoBR">
+  Atributos de Visualización</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="7-atributos-de-flexbox">7. Atributos de Flexbox</h3>
+<ul>
+<li><code>flex-direction</code>: Dirección del contenedor flex
+  <div class="highlight"><pre><span></span><code><span class="nt">flex-direction</span><span class="o">:</span><span class="w"> </span><span class="nt">row</span><span class="o">;</span>
+<span class="nt">flex-direction</span><span class="o">:</span><span class="w"> </span><span class="nt">column</span><span class="o">;</span>
+</code></pre></div></li>
+<li><code>justify-content</code>: Alineación horizontal en flex
+  <div class="highlight"><pre><span></span><code><span class="nt">justify-content</span><span class="o">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<span class="nt">justify-content</span><span class="o">:</span><span class="w"> </span><span class="nt">space-between</span><span class="o">;</span>
+</code></pre></div></li>
+<li><code>align-items</code>: Alineación vertical en flex
+  <div class="highlight"><pre><span></span><code><span class="nt">align-items</span><span class="o">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<span class="nt">align-items</span><span class="o">:</span><span class="w"> </span><span class="nt">stretch</span><span class="o">;</span>
+</code></pre></div></li>
+</ul>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="rNXeNZN" data-pen-title="Atributos de Flexbox" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/rNXeNZN">
+  Atributos de Flexbox</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="8-atributos-de-transicion-y-animacion">8. Atributos de Transición y Animación</h3>
+<ul>
+<li><code>transition</code>: Transiciones suaves
+  <div class="highlight"><pre><span></span><code><span class="nt">transition</span><span class="o">:</span><span class="w"> </span><span class="nt">all</span><span class="w"> </span><span class="nt">0</span><span class="p">.</span><span class="nc">3s</span><span class="w"> </span><span class="nt">ease</span><span class="o">;</span>
+</code></pre></div></li>
+<li><code>animation</code>: Animaciones
+  <div class="highlight"><pre><span></span><code><span class="nt">animation</span><span class="o">:</span><span class="w"> </span><span class="nt">nombreAnimacion</span><span class="w"> </span><span class="nt">2s</span><span class="w"> </span><span class="nt">infinite</span><span class="o">;</span>
+</code></pre></div></li>
+</ul>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="mdNPdGq" data-pen-title="Atributos de Transición y Animación" data-user="jhon-valencia-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jhon-valencia-the-encoder/pen/mdNPdGq">
+  Atributos de Transición y Animación</a> by jhon valencia (<a href="https://codepen.io/jhon-valencia-the-encoder">@jhon-valencia-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+<h3 id="fuente-oficiales">Fuente oficiales</h3>
+<p>La fuente oficial para los atributos CSS es la especificación del <strong>World Wide Web Consortium (W3C)</strong>. </p>
+<p><strong>Aquí tienes las referencias principales:</strong></p>
+<ul>
+<li><strong>Especificación CSS:</strong> <a href="https://www.w3.org/TR/CSS/">https://www.w3.org/TR/CSS/</a></li>
+<li>Esta es la especificación principal de CSS, que describe todas las propiedades y valores CSS.</li>
+<li><strong>W3C CSS Validator:</strong> <a href="https://jigsaw.w3.org/css-validator/">https://jigsaw.w3.org/css-validator/</a></li>
+<li>Puedes usar el validador de CSS del W3C para verificar la validez de tu código CSS y obtener sugerencias para mejorar la compatibilidad y la accesibilidad.</li>
+</ul>
+<p><strong>Recursos adicionales:</strong></p>
+<ul>
+<li><strong>MDN Web Docs:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">https://developer.mozilla.org/en-US/docs/Web/CSS</a></li>
+<li>Proporciona una excelente documentación de CSS con ejemplos detallados y explicaciones.</li>
+<li><strong>Can I Use...?:</strong> <a href="https://caniuse.com/">https://caniuse.com/</a></li>
+<li>Te permite comprobar la compatibilidad de las características de CSS en diferentes navegadores.</li>
+<li><strong>CSS Tricks:</strong> <a href="https://css-tricks.com/">https://css-tricks.com/</a></li>
+<li>Ofrece tutoriales y artículos sobre CSS con ejemplos y consejos.</li>
+</ul>
+<p><strong>Nota:</strong> La especificación del W3C es la fuente de verdad para todas las características de CSS. Es importante consultar esta especificación para obtener información precisa y actualizada sobre los atributos CSS y sus valores.</p>
+<h2 id="actividad-pon-a-prueba-tus-conocimientos-de-css">Actividad: ¡Pon a Prueba tus Conocimientos de CSS!</h2>
+<p><strong>Objetivo:</strong> Afianzar la comprensión de los atributos CSS a través de la práctica.</p>
+<p><strong>Instrucciones:</strong></p>
+<h3 id="1-analiza-y-prueba-revisa-cuidadosamente-cada-uno-de-los-ejemplos-de-la-sesion">1. <strong>Analiza y Prueba:</strong> Revisa cuidadosamente cada uno de los ejemplos de la sesión.</h3>
+<ul>
+<li>Identifica los atributos CSS utilizados.</li>
+<li>Comprende el efecto visual o funcional que genera cada atributo.</li>
+<li>Investiga en la documentación oficial de CSS para obtener información adicional.</li>
+</ul>
+<h3 id="2-experimenta-en-visual-studio-code">2. <strong>Experimenta en Visual Studio Code:</strong></h3>
+<ul>
+<li>Crea un nuevo proyecto en Visual Studio Code.</li>
+<li>Implementa los ejemplos de la sesión en archivos HTML y CSS.</li>
+<li>Realiza pruebas para observar cómo funcionan los diferentes atributos.</li>
+<li>Experimenta con modificaciones en los valores de los atributos para ver cómo afecta al resultado final.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 &copy; by JFVG
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs.sticky", "navigation.tabs", "navigation.top", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../js/password-protect.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

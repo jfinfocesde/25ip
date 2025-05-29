@@ -1,0 +1,2361 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="jhonfvg">
+      
+      
+        <link rel="canonical" href="https://jfinfocesde.github.io/25ip/content/p11/">
+      
+      
+        <link rel="prev" href="../p10/">
+      
+      
+        <link rel="next" href="../p12/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Semana 11 - ¿Qué es CSS Grid? - Introducción a la Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/password-protect.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#semana-11-que-es-css-grid" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Introducción a la Programación" class="md-header__button md-logo" aria-label="Introducción a la Programación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Semana 11 - ¿Qué es CSS Grid?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Contenido
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../pi/p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Proyecto Integrador
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Programación" class="md-nav__button md-logo" aria-label="Introducción a la Programación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    Introducción a la Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Contenido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Contenido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 1 - Pacto pedagógico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 2 - Introducción a HTML5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 3 - Tablas y Etiquetas Multimedia en HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 4 - Etiquetas de Formulario en HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 5 - Fundamentación de los Sistemas de Control de Versiones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 6 - Evaluación Primer Momento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 7 - CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 8 - Metodología BEM y Unidades CSS: Fundamentos y Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 9 - Propiedades de Posicionamiento en CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 10 - ¿Qué es Flexbox?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Semana 11 - ¿Qué es CSS Grid?
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Semana 11 - ¿Qué es CSS Grid?
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-css-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. ¿Qué es CSS Grid?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-terminologia-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Terminología clave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-propiedades-principales-de-css-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Propiedades principales de CSS Grid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Propiedades principales de CSS Grid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-propiedades-del-contenedor-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Propiedades del contenedor Grid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Propiedades del contenedor Grid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-grid-inline-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: grid | inline-grid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-template-columns-y-grid-template-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      grid-template-columns y grid-template-rows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-template-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      grid-template-areas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-row-gap-column-gap" class="md-nav__link">
+    <span class="md-ellipsis">
+      gap, row-gap, column-gap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#justify-items-y-align-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      justify-items y align-items
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#justify-content-y-align-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      justify-content y align-content
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-auto-columns-y-grid-auto-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      grid-auto-columns y grid-auto-rows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-auto-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      grid-auto-flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-propiedades-de-los-items-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Propiedades de los ítems Grid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Propiedades de los ítems Grid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grid-column-y-grid-row" class="md-nav__link">
+    <span class="md-ellipsis">
+      grid-column y grid-row
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-area" class="md-nav__link">
+    <span class="md-ellipsis">
+      grid-area
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#justify-self-y-align-self" class="md-nav__link">
+    <span class="md-ellipsis">
+      justify-self y align-self
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-creando-un-layout-basico-con-css-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Creando un layout básico con CSS Grid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Creando un layout básico con CSS Grid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tecnicas-avanzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Técnicas avanzadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Técnicas avanzadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-grid-template-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Grid Template Areas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Grid Template Areas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-auto-fill-y-auto-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Auto-fill y Auto-fit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Auto-fill y Auto-fit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-galeria-de-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Galería de imágenes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-grid-con-responsive-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Grid con Responsive Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Grid con Responsive Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-cambiar-layout-en-pantallas-pequenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Cambiar layout en pantallas pequeñas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-alineacion-y-espaciado" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Alineación y espaciado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 Alineación y espaciado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-centrar-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Centrar ítems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-ejemplos-practicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Ejemplos prácticos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Ejemplos prácticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-formulario-centrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Formulario centrado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-consejos-y-mejores-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Consejos y mejores prácticas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-diferencias-con-flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Diferencias con Flexbox
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-recursos-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Recursos adicionales
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 12 - Evaluación Segundo Momento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 13 - Frameworks CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 14 - Tutorial: Creando Componentes con Tailwind CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 15
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 16
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 17
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 18
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto Integrador
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto Integrador
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción Proyecto Integrador
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Herramientas CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pautas para la exposición del proyecto integrador (15 minutos)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archivo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-css-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. ¿Qué es CSS Grid?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-terminologia-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Terminología clave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-propiedades-principales-de-css-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Propiedades principales de CSS Grid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Propiedades principales de CSS Grid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-propiedades-del-contenedor-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Propiedades del contenedor Grid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Propiedades del contenedor Grid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-grid-inline-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      display: grid | inline-grid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-template-columns-y-grid-template-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      grid-template-columns y grid-template-rows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-template-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      grid-template-areas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-row-gap-column-gap" class="md-nav__link">
+    <span class="md-ellipsis">
+      gap, row-gap, column-gap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#justify-items-y-align-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      justify-items y align-items
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#justify-content-y-align-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      justify-content y align-content
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-auto-columns-y-grid-auto-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      grid-auto-columns y grid-auto-rows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-auto-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      grid-auto-flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-propiedades-de-los-items-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Propiedades de los ítems Grid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Propiedades de los ítems Grid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grid-column-y-grid-row" class="md-nav__link">
+    <span class="md-ellipsis">
+      grid-column y grid-row
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-area" class="md-nav__link">
+    <span class="md-ellipsis">
+      grid-area
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#justify-self-y-align-self" class="md-nav__link">
+    <span class="md-ellipsis">
+      justify-self y align-self
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-creando-un-layout-basico-con-css-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Creando un layout básico con CSS Grid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Creando un layout básico con CSS Grid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tecnicas-avanzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Técnicas avanzadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Técnicas avanzadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-grid-template-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Grid Template Areas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Grid Template Areas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-auto-fill-y-auto-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Auto-fill y Auto-fit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Auto-fill y Auto-fit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-galeria-de-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Galería de imágenes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-grid-con-responsive-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Grid con Responsive Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Grid con Responsive Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-cambiar-layout-en-pantallas-pequenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Cambiar layout en pantallas pequeñas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-alineacion-y-espaciado" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Alineación y espaciado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 Alineación y espaciado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-centrar-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Centrar ítems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-ejemplos-practicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Ejemplos prácticos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Ejemplos prácticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-formulario-centrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Formulario centrado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-consejos-y-mejores-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Consejos y mejores prácticas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-diferencias-con-flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Diferencias con Flexbox
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-recursos-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Recursos adicionales
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="semana-11-que-es-css-grid">Semana 11 - ¿Qué es CSS Grid?</h1>
+<h2 id="1-que-es-css-grid"><strong>1. ¿Qué es CSS Grid?</strong></h2>
+<p>CSS Grid es un sistema de diseño bidimensional en CSS que permite organizar contenido en filas y columnas de manera precisa y flexible. A diferencia de Flexbox, que es ideal para diseños unidimensionales (una sola fila o columna), Grid está diseñado para manejar layouts complejos en dos dimensiones, como dashboards, galerías de imágenes, o diseños de páginas completas.</p>
+<p><strong>Ventajas de CSS Grid:</strong>
+- Control total sobre filas y columnas.
+- Posicionamiento preciso de elementos sin necesidad de hacks.
+- Soporte para diseños responsivos sin media queries excesivas.
+- Reducción de código en comparación con técnicas más antiguas (como floats).</p>
+<p><strong>Soporte en navegadores:</strong>
+CSS Grid es compatible con todos los navegadores modernos (Chrome, Firefox, Safari, Edge) desde 2017. Puedes verificar compatibilidad específica en <a href="https://caniuse.com/css-grid">Can I Use</a>.</p>
+<hr />
+<h2 id="2-terminologia-clave"><strong>2. Terminología clave</strong></h2>
+<p>Antes de sumergirnos en las propiedades, es importante entender los términos básicos de CSS Grid:</p>
+<ul>
+<li><strong>Grid Container</strong>: El elemento padre que tiene <code>display: grid</code>. Todos sus hijos directos se convierten en ítems del grid.</li>
+<li><strong>Grid Item</strong>: Los elementos hijos directos del contenedor grid.</li>
+<li><strong>Grid Line</strong>: Las líneas horizontales y verticales que dividen el grid. Se numeran empezando desde 1.</li>
+<li><strong>Grid Track</strong>: Una fila (<code>row</code>) o columna (<code>column</code>) en el grid.</li>
+<li><strong>Grid Cell</strong>: La intersección de una fila y una columna, es decir, una celda.</li>
+<li><strong>Grid Area</strong>: Un área rectangular formada por una o más celdas.</li>
+<li><strong>Gap</strong>: El espacio entre las celdas (antes conocido como <code>grid-gap</code>).</li>
+</ul>
+<hr />
+<h2 id="3-propiedades-principales-de-css-grid"><strong>3. Propiedades principales de CSS Grid</strong></h2>
+<p>Las propiedades de CSS Grid se dividen en dos categorías: las que se aplican al <strong>contenedor</strong> y las que se aplican a los <strong>ítems</strong>.</p>
+<h3 id="31-propiedades-del-contenedor-grid"><strong>3.1 Propiedades del contenedor Grid</strong></h3>
+<p>Estas propiedades se aplican al elemento con <code>display: grid</code>.</p>
+<h4 id="display-grid-inline-grid"><strong><code>display: grid | inline-grid</code></strong></h4>
+<p>Define un elemento como contenedor grid.
+- <code>grid</code>: Crea un grid a nivel de bloque.
+- <code>inline-grid</code>: Crea un grid en línea (como un elemento inline-block).</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="grid-template-columns-y-grid-template-rows"><strong><code>grid-template-columns</code> y <code>grid-template-rows</code></strong></h4>
+<p>Definen el número y tamaño de las columnas y filas.</p>
+<ul>
+<li><strong>Valores posibles</strong>:</li>
+<li>Longitudes fijas: <code>px</code>, <code>rem</code>, <code>%</code>, etc.</li>
+<li>Fracciones: <code>fr</code> (unidad flexible que distribuye el espacio disponible).</li>
+<li>Funciones: <code>auto</code>, <code>minmax()</code>, <code>repeat()</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span><span class="w"> </span><span class="c">/* 3 columnas: 100px, 200px, resto del espacio */</span>
+<span class="w">  </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* 2 filas: 50px, 100px */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="grid-template-areas"><strong><code>grid-template-areas</code></strong></h4>
+<p>Permite nombrar áreas en el grid para posicionar ítems de forma semántica.</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-areas</span><span class="p">:</span>
+<span class="w">    </span><span class="s2">&quot;header header header&quot;</span>
+<span class="w">    </span><span class="s2">&quot;sidebar main main&quot;</span>
+<span class="w">    </span><span class="s2">&quot;footer footer footer&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="gap-row-gap-column-gap"><strong><code>gap</code>, <code>row-gap</code>, <code>column-gap</code></strong></h4>
+<p>Define el espacio entre celdas.
+- <code>gap</code>: Establece tanto el espacio entre filas como entre columnas.
+- <code>row-gap</code>: Solo para filas.
+- <code>column-gap</code>: Solo para columnas.</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* 20px entre filas y columnas */</span>
+<span class="w">  </span><span class="c">/* O: row-gap: 20px; column-gap: 10px; */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="justify-items-y-align-items"><strong><code>justify-items</code> y <code>align-items</code></strong></h4>
+<p>Controlan la alineación de los ítems dentro de las celdas.
+- <code>justify-items</code>: Alineación horizontal (<code>start</code>, <code>end</code>, <code>center</code>, <code>stretch</code>).
+- <code>align-items</code>: Alineación vertical (<code>start</code>, <code>end</code>, <code>center</code>, <code>stretch</code>).</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"> </span><span class="c">/* Centra ítems horizontalmente */</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">start</span><span class="p">;</span><span class="w"> </span><span class="c">/* Alinea ítems al inicio verticalmente */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="justify-content-y-align-content"><strong><code>justify-content</code> y <code>align-content</code></strong></h4>
+<p>Alinean el grid completo dentro del contenedor si hay espacio extra.
+- <code>justify-content</code>: Alineación horizontal del grid.
+- <code>align-content</code>: Alineación vertical del grid.
+- Valores: <code>start</code>, <code>end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">space-between</span><span class="p">;</span><span class="w"> </span><span class="c">/* Distribuye espacio entre columnas */</span>
+<span class="w">  </span><span class="k">align-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"> </span><span class="c">/* Centra el grid verticalmente */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="grid-auto-columns-y-grid-auto-rows"><strong><code>grid-auto-columns</code> y <code>grid-auto-rows</code></strong></h4>
+<p>Definen el tamaño de columnas o filas creadas implícitamente (cuando hay más ítems de los definidos en <code>grid-template</code>).</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-auto-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Columnas implícitas de 50px */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="grid-auto-flow"><strong><code>grid-auto-flow</code></strong></h4>
+<p>Controla cómo se colocan los ítems que no tienen una posición explícita.
+- <code>row</code>: Llena filas primero (por defecto).
+- <code>column</code>: Llena columnas primero.
+- <code>dense</code>: Intenta llenar huecos en el grid.</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-auto-flow</span><span class="p">:</span><span class="w"> </span><span class="kc">column</span><span class="p">;</span><span class="w"> </span><span class="c">/* Ítems se colocan en columnas */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="32-propiedades-de-los-items-grid"><strong>3.2 Propiedades de los ítems Grid</strong></h3>
+<p>Estas propiedades se aplican a los elementos hijos del contenedor grid.</p>
+<h4 id="grid-column-y-grid-row"><strong><code>grid-column</code> y <code>grid-row</code></strong></h4>
+<p>Especifican en qué líneas del grid se coloca un ítem.
+- <code>grid-column: &lt;start-line&gt; / &lt;end-line&gt;</code>: Define la posición inicial y final de la columna.
+- <code>grid-row: &lt;start-line&gt; / &lt;end-line&gt;</code>: Define la posición inicial y final de la fila.</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">/* Ocupa desde la línea 1 hasta la 3 en columnas */</span>
+<span class="w">  </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c">/* Ocupa desde la línea 2 hasta la 4 en filas */</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Atajo</strong>: También puedes usar <code>span</code> para indicar cuántas celdas abarcar:
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c">/* Ocupa 2 columnas desde la línea 1 */</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="grid-area"><strong><code>grid-area</code></strong></h4>
+<p>Asigna un ítem a un área nombrada (definida en <code>grid-template-areas</code>) o especifica su posición directamente.</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">header</span><span class="p">;</span><span class="w"> </span><span class="c">/* Coloca el ítem en el área llamada &quot;header&quot; */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="justify-self-y-align-self"><strong><code>justify-self</code> y <code>align-self</code></strong></h4>
+<p>Alinean un ítem individual dentro de su celda.
+- <code>justify-self</code>: Alineación horizontal.
+- <code>align-self</code>: Alineación vertical.
+- Valores: <code>start</code>, <code>end</code>, <code>center</code>, <code>stretch</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">justify-self</span><span class="p">:</span><span class="w"> </span><span class="kc">end</span><span class="p">;</span><span class="w"> </span><span class="c">/* Alinea el ítem a la derecha de la celda */</span>
+<span class="w">  </span><span class="k">align-self</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"> </span><span class="c">/* Centra el ítem verticalmente */</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="4-creando-un-layout-basico-con-css-grid"><strong>4. Creando un layout básico con CSS Grid</strong></h2>
+<p>Vamos a crear un diseño simple de una página web con un encabezado, barra lateral, contenido principal y pie de página.</p>
+<h3 id="html"><strong>HTML</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>Header<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>Sidebar<span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>Main Content<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>Footer<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="css"><strong>CSS</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span><span class="w"> </span><span class="c">/* Sidebar fijo, contenido flexible */</span>
+<span class="w">  </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Header, Main, Footer */</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">vh</span><span class="p">;</span><span class="w"> </span><span class="c">/* Ocupa toda la altura de la ventana */</span>
+<span class="p">}</span>
+
+<span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">/* Ocupa ambas columnas */</span>
+<span class="w">  </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#f1c40f</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">aside</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#2ecc71</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#3498db</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#e74c3c</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="resultado"><strong>Resultado</strong></h3>
+<p>Este código crea un diseño con:
+- Un encabezado que abarca todo el ancho.
+- Una barra lateral a la izquierda.
+- Un área de contenido principal a la derecha.
+- Un pie de página que abarca todo el ancho.</p>
+<hr />
+<h2 id="5-tecnicas-avanzadas"><strong>5. Técnicas avanzadas</strong></h2>
+<h3 id="51-grid-template-areas"><strong>5.1 Grid Template Areas</strong></h3>
+<p>Las áreas nombradas hacen que el código sea más legible y fácil de mantener.</p>
+<h4 id="ejemplo"><strong>Ejemplo</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-areas</span><span class="p">:</span>
+<span class="w">    </span><span class="s2">&quot;header header&quot;</span>
+<span class="w">    </span><span class="s2">&quot;sidebar main&quot;</span>
+<span class="w">    </span><span class="s2">&quot;footer footer&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">header</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">aside</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">sidebar</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">main</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">footer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="52-auto-fill-y-auto-fit"><strong>5.2 Auto-fill y Auto-fit</strong></h3>
+<p>Estas funciones se usan con <code>repeat()</code> para crear grids dinámicos que se ajustan al espacio disponible.</p>
+<ul>
+<li><strong><code>auto-fill</code></strong>: Crea tantas columnas/filas como quepan, incluso si están vacías.</li>
+<li><strong><code>auto-fit</code></strong>: Crea columnas/filas solo para los ítems existentes y expande las celdas para llenar el espacio.</li>
+</ul>
+<h4 id="ejemplo-galeria-de-imagenes"><strong>Ejemplo: Galería de imágenes</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="kc">auto</span><span class="nv">-fit</span><span class="p">,</span><span class="w"> </span><span class="nf">minmax</span><span class="p">(</span><span class="mi">200</span><span class="kt">px</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">));</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#3498db</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Esto crea una galería donde cada ítem tiene al menos 200px de ancho, y las columnas se ajustan automáticamente según el ancho del contenedor.</p>
+<h3 id="53-grid-con-responsive-design"><strong>5.3 Grid con Responsive Design</strong></h3>
+<p>CSS Grid permite crear diseños responsivos sin necesidad de muchas media queries.</p>
+<h4 id="ejemplo-cambiar-layout-en-pantallas-pequenas"><strong>Ejemplo: Cambiar layout en pantallas pequeñas</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-areas</span><span class="p">:</span>
+<span class="w">    </span><span class="s2">&quot;header header&quot;</span>
+<span class="w">    </span><span class="s2">&quot;sidebar main&quot;</span>
+<span class="w">    </span><span class="s2">&quot;footer footer&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">768px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span><span class="w"> </span><span class="c">/* Una sola columna */</span>
+<span class="w">    </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">grid-template-areas</span><span class="p">:</span>
+<span class="w">      </span><span class="s2">&quot;header&quot;</span>
+<span class="w">      </span><span class="s2">&quot;sidebar&quot;</span>
+<span class="w">      </span><span class="s2">&quot;main&quot;</span>
+<span class="w">      </span><span class="s2">&quot;footer&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="54-alineacion-y-espaciado"><strong>5.4 Alineación y espaciado</strong></h3>
+<p>Puedes combinar <code>justify-content</code>, <code>align-content</code>, <code>justify-items</code>, y <code>align-items</code> para controlar el espaciado y la alineación con precisión.</p>
+<h4 id="ejemplo-centrar-items"><strong>Ejemplo: Centrar ítems</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">);</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"> </span><span class="c">/* Centra el grid horizontalmente */</span>
+<span class="w">  </span><span class="k">align-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"> </span><span class="c">/* Centra el grid verticalmente */</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">vh</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="6-ejemplos-practicos"><strong>6. Ejemplos prácticos</strong></h2>
+<h3 id="61-dashboard"><strong>6.1 Dashboard</strong></h3>
+<p>Un diseño típico de dashboard con varias secciones.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;dashboard&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card&quot;</span><span class="p">&gt;</span>Card 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card&quot;</span><span class="p">&gt;</span>Card 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card&quot;</span><span class="p">&gt;</span>Card 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card&quot;</span><span class="p">&gt;</span>Card 4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">dashboard</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="kc">auto</span><span class="nv">-fit</span><span class="p">,</span><span class="w"> </span><span class="nf">minmax</span><span class="p">(</span><span class="mi">250</span><span class="kt">px</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">));</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#ecf0f1</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="62-formulario-centrado"><strong>6.2 Formulario centrado</strong></h3>
+<p>Un formulario que se centra en la pantalla.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-container&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Nombre&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Email&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">form-container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">place-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"> </span><span class="c">/* Atajo para justify-items y align-items */</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">vh</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">form</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#f1c40f</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="7-consejos-y-mejores-practicas"><strong>7. Consejos y mejores prácticas</strong></h2>
+<ol>
+<li><strong>Usa nombres descriptivos para áreas</strong>: En <code>grid-template-areas</code>, usa nombres como <code>header</code>, <code>main</code>, <code>sidebar</code> para que el código sea más legible.</li>
+<li><strong>Aprovecha <code>minmax()</code></strong>: Es ideal para crear diseños responsivos sin necesidad de media queries.</li>
+<li><strong>Combina Grid y Flexbox</strong>: Usa Grid para el layout general y Flexbox para alinear contenido dentro de las celdas.</li>
+<li><strong>Prueba en diferentes navegadores</strong>: Aunque Grid es ampliamente soportado, verifica que tu diseño funcione en navegadores menos comunes.</li>
+<li><strong>Usa herramientas de desarrollo</strong>: Las herramientas de inspección de Chrome y Firefox tienen un visor de Grid que muestra las líneas y áreas.</li>
+<li><strong>Evita anidar grids innecesariamente</strong>: Demasiados niveles de anidamiento pueden complicar el mantenimiento.</li>
+</ol>
+<hr />
+<h2 id="8-diferencias-con-flexbox"><strong>8. Diferencias con Flexbox</strong></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Característica</strong></th>
+<th><strong>CSS Grid</strong></th>
+<th><strong>Flexbox</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dimensión</strong></td>
+<td>Bidimensional (filas y columnas)</td>
+<td>Unidimensional (una fila o columna)</td>
+</tr>
+<tr>
+<td><strong>Uso principal</strong></td>
+<td>Layouts complejos (dashboards, páginas)</td>
+<td>Alineación de elementos en una dirección</td>
+</tr>
+<tr>
+<td><strong>Control de espaciado</strong></td>
+<td>Más preciso (gap, grid-template-areas)</td>
+<td>Menos control sobre el espacio entre ítems</td>
+</tr>
+<tr>
+<td><strong>Flexibilidad</strong></td>
+<td>Ideal para estructuras fijas y dinámicas</td>
+<td>Ideal para contenido dinámico en una línea</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cuándo usar cada uno</strong>:
+- Usa <strong>Grid</strong> para layouts de página completa o estructuras complejas.
+- Usa <strong>Flexbox</strong> para componentes más pequeños o alineaciones simples.</p>
+<hr />
+<h2 id="9-recursos-adicionales"><strong>9. Recursos adicionales</strong></h2>
+<ul>
+<li><strong>Documentación oficial</strong>: <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout">MDN Web Docs - CSS Grid</a></li>
+<li><strong>Herramientas interactivas</strong>:</li>
+<li><a href="https://cssgridgarden.com/">Grid Garden</a>: Un juego para aprender Grid.</li>
+<li><a href="https://www.makeitgrid.com/">Makeitgrid</a>: Un generador visual para Grid.</li>
+<li><a href="https://cssgrid-generator.netlify.app/">CSS Grid Generator</a>: Genera código Grid visualmente.</li>
+<li><strong>Videos</strong>:</li>
+<li>Curso gratuito de Grid en YouTube por <a href="https://www.youtube.com/watch?v=9zBsdzdE4sM">Kevin Powell</a>.</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 &copy; by JFVG
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs.sticky", "navigation.tabs", "navigation.top", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../js/password-protect.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

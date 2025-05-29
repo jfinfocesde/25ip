@@ -1,0 +1,2352 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="jhonfvg">
+      
+      
+        <link rel="canonical" href="https://jfinfocesde.github.io/25ip/content/p6/">
+      
+      
+        <link rel="prev" href="../p5/">
+      
+      
+        <link rel="next" href="../p7/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Semana 6 - Evaluación Primer Momento - Introducción a la Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/password-protect.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#semana-6-evaluacion-primer-momento" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Introducción a la Programación" class="md-header__button md-logo" aria-label="Introducción a la Programación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Semana 6 - Evaluación Primer Momento
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Contenido
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../pi/p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Proyecto Integrador
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Programación" class="md-nav__button md-logo" aria-label="Introducción a la Programación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    Introducción a la Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Contenido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Contenido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 1 - Pacto pedagógico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 2 - Introducción a HTML5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 3 - Tablas y Etiquetas Multimedia en HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 4 - Etiquetas de Formulario en HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 5 - Fundamentación de los Sistemas de Control de Versiones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Semana 6 - Evaluación Primer Momento
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Semana 6 - Evaluación Primer Momento
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-evaluacion-de-conocimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Evaluación de Conocimiento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-evaluacion-de-desempeno" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Evaluación de Desempeño
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Evaluación de Desempeño">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blog-de-recetas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blog de Recetas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blog de Recetas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-carpetas-sugerida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Carpetas Sugerida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-indexhtml-pagina-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. index.html - Página Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-recetahtml-detalle-de-una-receta" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. receta.html - Detalle de una Receta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sobrehtml-sobre-mi" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. sobre.html - Sobre Mí
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-contactohtml-contacto" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. contacto.html - Contacto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Generales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#portafolio-personal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portafolio Personal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Portafolio Personal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-carpetas-sugerida_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Carpetas Sugerida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-indexhtml-pagina-principal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. index.html - Página Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-proyectoshtml-mis-proyectos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. proyectos.html - Mis Proyectos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sobrehtml-sobre-mi_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. sobre.html - Sobre Mí
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-contactohtml-contacto_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. contacto.html - Contacto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-generales_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Generales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tienda-en-linea-de-libros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tienda en Línea de Libros
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tienda en Línea de Libros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-carpetas-sugerida_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Carpetas Sugerida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-indexhtml-pagina-principal_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. index.html - Página Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-catalogohtml-catalogo-de-productos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. catalogo.html - Catálogo de Productos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-nosotroshtml-nosotros" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. nosotros.html - Nosotros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-contactohtml-contacto_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. contacto.html - Contacto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-generales_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Generales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sitio-de-viajes-y-turismo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sitio de Viajes y Turismo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sitio de Viajes y Turismo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-carpetas-sugerida_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Carpetas Sugerida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-indexhtml-pagina-principal_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. index.html - Página Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-destinoshtml-detalle-de-un-destino" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. destinos.html - Detalle de un Destino
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sobrehtml-sobre-nosotros" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. sobre.html - Sobre Nosotros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-contactohtml-contacto_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. contacto.html - Contacto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-generales_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Generales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#galeria-de-arte-virtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Galería de Arte Virtual
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Galería de Arte Virtual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-carpetas-sugerida_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Carpetas Sugerida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-indexhtml-pagina-principal_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. index.html - Página Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-obrashtml-detalle-de-una-obra" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. obras.html - Detalle de una Obra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sobrehtml-sobre-la-galeria" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. sobre.html - Sobre la Galería
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-contactohtml-contacto_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. contacto.html - Contacto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-generales_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Generales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de Evaluación:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 7 - CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 8 - Metodología BEM y Unidades CSS: Fundamentos y Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 9 - Propiedades de Posicionamiento en CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 10 - ¿Qué es Flexbox?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 11 - ¿Qué es CSS Grid?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 12 - Evaluación Segundo Momento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 13 - Frameworks CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 14 - Tutorial: Creando Componentes con Tailwind CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 15
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 16
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 17
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semana 18
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto Integrador
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto Integrador
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción Proyecto Integrador
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Herramientas CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pautas para la exposición del proyecto integrador (15 minutos)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archivo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-evaluacion-de-conocimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Evaluación de Conocimiento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-evaluacion-de-desempeno" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Evaluación de Desempeño
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Evaluación de Desempeño">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blog-de-recetas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blog de Recetas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blog de Recetas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-carpetas-sugerida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Carpetas Sugerida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-indexhtml-pagina-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. index.html - Página Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-recetahtml-detalle-de-una-receta" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. receta.html - Detalle de una Receta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sobrehtml-sobre-mi" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. sobre.html - Sobre Mí
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-contactohtml-contacto" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. contacto.html - Contacto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Generales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#portafolio-personal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portafolio Personal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Portafolio Personal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-carpetas-sugerida_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Carpetas Sugerida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-indexhtml-pagina-principal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. index.html - Página Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-proyectoshtml-mis-proyectos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. proyectos.html - Mis Proyectos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sobrehtml-sobre-mi_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. sobre.html - Sobre Mí
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-contactohtml-contacto_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. contacto.html - Contacto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-generales_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Generales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tienda-en-linea-de-libros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tienda en Línea de Libros
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tienda en Línea de Libros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-carpetas-sugerida_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Carpetas Sugerida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-indexhtml-pagina-principal_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. index.html - Página Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-catalogohtml-catalogo-de-productos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. catalogo.html - Catálogo de Productos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-nosotroshtml-nosotros" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. nosotros.html - Nosotros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-contactohtml-contacto_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. contacto.html - Contacto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-generales_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Generales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sitio-de-viajes-y-turismo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sitio de Viajes y Turismo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sitio de Viajes y Turismo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-carpetas-sugerida_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Carpetas Sugerida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-indexhtml-pagina-principal_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. index.html - Página Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-destinoshtml-detalle-de-un-destino" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. destinos.html - Detalle de un Destino
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sobrehtml-sobre-nosotros" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. sobre.html - Sobre Nosotros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-contactohtml-contacto_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. contacto.html - Contacto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-generales_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Generales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#galeria-de-arte-virtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Galería de Arte Virtual
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Galería de Arte Virtual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-carpetas-sugerida_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Carpetas Sugerida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-indexhtml-pagina-principal_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. index.html - Página Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-obrashtml-detalle-de-una-obra" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. obras.html - Detalle de una Obra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sobrehtml-sobre-la-galeria" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. sobre.html - Sobre la Galería
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-contactohtml-contacto_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. contacto.html - Contacto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-generales_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Generales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de Evaluación:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="semana-6-evaluacion-primer-momento">Semana 6 - Evaluación Primer Momento</h1>
+<h2 id="1-evaluacion-de-conocimiento"><strong>1. Evaluación de Conocimiento</strong></h2>
+<p>La evaluación de conocimiento se realizará a través de la plataforma Quizizz que aborda los temas vistos durante las primeras 5 semanas.</p>
+<ul>
+<li><strong>Plataforma</strong>: <a href="https://quizizz.com/join" target="target">Enlace Quizizz</a></li>
+<li><strong>Acceso</strong>: Se proporcionará el enlace y código de la prueba al inicio de la evaluación</li>
+</ul>
+<h2 id="2-evaluacion-de-desempeno"><strong>2. Evaluación de Desempeño</strong></h2>
+<p>Crear un proyecto HTML en Visual Studio Code y publicarlo en GitHub Pages. Para la evaluación de desempeño, se realizará un ejercicio práctico asignado por el docente durante la clase.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Ejercicio 1</label><label for="__tabbed_1_2">Ejercicio 2</label><label for="__tabbed_1_3">Ejercicio 3</label><label for="__tabbed_1_4">Ejercicio 4</label><label for="__tabbed_1_5">Ejercicio 5</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h3 id="blog-de-recetas">Blog de Recetas</h3>
+<h4 id="estructura-de-carpetas-sugerida">Estructura de Carpetas Sugerida</h4>
+<div class="highlight"><pre><span></span><code>blog-recetas/
+│
+├── index.html           # Página principal con resumen de recetas destacadas
+├── receta.html          # Detalle de la receta &quot;Torta de Chocolate&quot;
+├── sobre.html           # Información sobre el autor
+├── contacto.html        # Formulario para sugerencias o comentarios
+├── images/              # Carpeta para almacenar las imágenes
+│   ├── receta1.jpg      # Imagen representativa de la torta
+│   └── autor.jpg        # Imagen del autor
+└── README.md            # Archivo con descripción del proyecto para GitHub
+</code></pre></div>
+<h4 id="1-indexhtml-pagina-principal">1. index.html - Página Principal</h4>
+<p><strong>Propósito:</strong><br />
+Esta es la página de inicio que da la bienvenida a los visitantes y muestra un resumen de recetas destacadas.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal que diga "Bienvenidos al Blog de Recetas" y una barra de navegación con enlaces a las otras páginas (Inicio, Receta, Sobre mí, Contacto).
+- <strong>Contenido principal</strong>: Una sección con un subtítulo como "Recetas Destacadas", seguida de una lista (ordenada o desordenada) con al menos tres nombres de recetas. Una de ellas ("Torta de Chocolate") debe enlazar a <code>receta.html</code>, mientras que las otras pueden ser texto plano por ahora.
+- <strong>Pie de página</strong>: Un texto simple con el copyright, por ejemplo, "© 2025 Blog de Recetas".</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;ul&gt;</code> o <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h4 id="2-recetahtml-detalle-de-una-receta">2. receta.html - Detalle de una Receta</h4>
+<p><strong>Propósito:</strong><br />
+Muestra los detalles de una receta específica ("Torta de Chocolate") con ingredientes y pasos.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Torta de Chocolate" y la misma barra de navegación que en la página principal con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: 
+- Una sección con un subtítulo "Ingredientes" que contenga una tabla. La tabla debe tener dos columnas ("Ingrediente" y "Cantidad") y al menos tres filas con ejemplos (por ejemplo, Harina - 2 tazas, Azúcar - 1 taza, Chocolate - 200g).
+- Otra sección con un subtítulo "Preparación" que incluya una lista ordenada con al menos tres pasos (por ejemplo, precalentar el horno, mezclar ingredientes, hornear).
+- Una imagen representativa de la torta, ubicada debajo de las secciones.
+- <strong>Pie de página</strong>: El mismo texto de copyright que en la página principal.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h4 id="3-sobrehtml-sobre-mi">3. sobre.html - Sobre Mí</h4>
+<p><strong>Propósito:</strong><br />
+Presenta información sobre el autor del blog y su relación con las recetas.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Sobre el Autor" y la barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: 
+- Un artículo con un subtítulo como "¿Quién soy?" seguido de un párrafo breve describiendo al autor (por ejemplo, "Soy un apasionado de la cocina y comparto mis recetas favoritas aquí").
+- Un bloque lateral (aside) con un subtítulo como "Dato Curioso" y un texto breve (por ejemplo, "¡Mi primera receta fue un desastre total!").
+- Una imagen del autor debajo del texto.
+- <strong>Pie de página</strong>: El mismo texto de copyright que en las otras páginas.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;footer&gt;</code>.</p>
+<hr />
+<h4 id="4-contactohtml-contacto">4. contacto.html - Contacto</h4>
+<p><strong>Propósito:</strong><br />
+Permite a los visitantes enviar sugerencias o comentarios mediante un formulario.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Contáctame" y la barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: Una sección con un subtítulo como "Envía tu sugerencia" que contenga un formulario. El formulario debe incluir:
+- Un campo de texto para el nombre con una etiqueta asociada ("Nombre").
+- Un campo de correo electrónico con una etiqueta ("Email").
+- Un área de texto para el mensaje con una etiqueta ("Mensaje"), con un tamaño razonable (por ejemplo, 4 filas y 50 columnas).
+- Un botón de envío con la palabra "Enviar".
+- <strong>Pie de página</strong>: El mismo texto de copyright que en las otras páginas.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code> (type="text" y "email"), <code>&lt;textarea&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h3 id="notas-generales">Notas Generales</h3>
+<ul>
+<li>Todas las páginas deben estar interconectadas mediante la barra de navegación.</li>
+<li>La carpeta <code>images/</code> debe contener al menos dos imágenes: una para la receta (<code>receta1.jpg</code>) y otra para el autor (<code>autor.jpg</code>).</li>
+<li>El proyecto debe subirse a GitHub y publicarse en GitHub Pages siguiendo los pasos estándar (inicializar Git, crear un repositorio, hacer commit, push y configurar Pages).</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<h3 id="portafolio-personal">Portafolio Personal</h3>
+<h4 id="estructura-de-carpetas-sugerida_1">Estructura de Carpetas Sugerida</h4>
+<div class="highlight"><pre><span></span><code>portafolio-personal/
+│
+├── index.html           # Página principal
+├── proyectos.html       # Lista de proyectos
+├── sobre.html           # Información sobre el autor
+├── contacto.html        # Formulario de contacto
+├── images/              # Carpeta para imágenes
+│   ├── proyecto1.jpg    # Imagen de un proyecto
+│   └── autor.jpg        # Foto del autor
+└── README.md            # Descripción del proyecto para GitHub
+</code></pre></div>
+<h4 id="1-indexhtml-pagina-principal_1">1. index.html - Página Principal</h4>
+<p><strong>Propósito:</strong><br />
+Sirve como la página de bienvenida del portafolio, presentando al propietario y un resumen de lo que ofrece el sitio.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Bienvenidos a mi Portafolio" y una barra de navegación con enlaces a las otras páginas (Inicio, Proyectos, Sobre mí, Contacto).
+- <strong>Contenido principal</strong>: Una sección con un subtítulo como "¡Hola!" seguida de un párrafo breve de presentación (por ejemplo, "Soy [Nombre], un apasionado por [habilidad o profesión]"). Debajo, una lista desordenada con tres áreas de interés o habilidades (por ejemplo, "Diseño web", "Programación", "Fotografía").
+- <strong>Pie de página</strong>: Un texto simple con el copyright, por ejemplo, "© 2025 [Nombre]".</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;footer&gt;</code>.</p>
+<hr />
+<h4 id="2-proyectoshtml-mis-proyectos">2. proyectos.html - Mis Proyectos</h4>
+<p><strong>Propósito:</strong><br />
+Muestra una selección de proyectos realizados por el propietario, destacando detalles específicos.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Mis Proyectos" y la misma barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: 
+- Una sección con un subtítulo "Proyectos Destacados" que incluya una tabla. La tabla debe tener tres columnas ("Proyecto", "Descripción", "Año") y al menos tres filas con ejemplos (por ejemplo, "Sitio Web - Tienda Online - 2024", "App Móvil - Calculadora - 2023", "Diseño - Logo Personal - 2022").
+- Una imagen representativa de uno de los proyectos (por ejemplo, una captura de pantalla), ubicada debajo de la tabla.
+- <strong>Pie de página</strong>: El mismo texto de copyright que en la página principal.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h4 id="3-sobrehtml-sobre-mi_1">3. sobre.html - Sobre Mí</h4>
+<p><strong>Propósito:</strong><br />
+Presenta información personal y profesional sobre el propietario del portafolio.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Sobre Mí" y la barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: 
+- Un artículo con un subtítulo como "¿Quién soy?" seguido de un párrafo breve (por ejemplo, "Soy [Nombre], un [profesión] con experiencia en [campo]"). 
+- Un bloque lateral (aside) con un subtítulo como "Dato Interesante" y un texto breve (por ejemplo, "¡Me tomó 3 meses aprender a programar mi primer sitio!").
+- Una imagen del propietario (por ejemplo, una foto personal) debajo del texto.
+- <strong>Pie de página</strong>: El mismo texto de copyright que en las otras páginas.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;footer&gt;</code>.</p>
+<hr />
+<h4 id="4-contactohtml-contacto_1">4. contacto.html - Contacto</h4>
+<p><strong>Propósito:</strong><br />
+Permite a los visitantes ponerse en contacto con el propietario mediante un formulario.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Contáctame" y la barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: Una sección con un subtítulo como "Envíame un mensaje" que contenga un formulario. El formulario debe incluir:
+- Un campo de texto para el nombre con una etiqueta asociada ("Nombre").
+- Un campo de correo electrónico con una etiqueta ("Email").
+- Un área de texto para el mensaje con una etiqueta ("Mensaje"), con un tamaño adecuado (por ejemplo, 4 filas y 50 columnas).
+- Un botón de envío con la palabra "Enviar".
+- <strong>Pie de página</strong>: El mismo texto de copyright que en las otras páginas.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code> (type="text" y "email"), <code>&lt;textarea&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h3 id="notas-generales_1">Notas Generales</h3>
+<ul>
+<li>Las páginas deben estar interconectadas mediante la barra de navegación.</li>
+<li>La carpeta <code>images/</code> debe incluir al menos dos imágenes: una para un proyecto (<code>proyecto1.jpg</code>) y otra para el autor (<code>autor.jpg</code>).</li>
+<li>El proyecto debe subirse a GitHub y publicarse en GitHub Pages siguiendo los pasos habituales (inicializar Git, crear repositorio, commit, push y configurar Pages).</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<h3 id="tienda-en-linea-de-libros">Tienda en Línea de Libros</h3>
+<h4 id="estructura-de-carpetas-sugerida_2">Estructura de Carpetas Sugerida</h4>
+<div class="highlight"><pre><span></span><code>libreria-virtual/
+│
+├── index.html           # Página principal
+├── catalogo.html        # Detalle de un libro
+├── nosotros.html        # Información sobre la tienda
+├── contacto.html        # Formulario de contacto
+├── images/              # Carpeta para imágenes
+│   ├── libro1.jpg       # Imagen de la portada de &quot;El Hobbit&quot;
+│   └── estanteria.jpg   # Imagen de una estantería
+└── README.md            # Descripción del proyecto para GitHub
+</code></pre></div>
+<h4 id="1-indexhtml-pagina-principal_2">1. index.html - Página Principal</h4>
+<p><strong>Propósito:</strong><br />
+Es la página de inicio de la tienda, dando la bienvenida y mostrando una selección de libros disponibles.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Bienvenidos a la Librería Virtual" y una barra de navegación con enlaces a las otras páginas (Inicio, Catálogo, Nosotros, Contacto).
+- <strong>Contenido principal</strong>: Una sección con un subtítulo como "Libros en Venta" seguida de una lista desordenada con tres títulos de libros (por ejemplo, "Cien Años de Soledad", "El Hobbit", "1984"). Uno de ellos ("El Hobbit") debe enlazar a <code>catalogo.html</code>, mientras que los otros pueden ser texto plano.
+- <strong>Pie de página</strong>: Un texto simple con el copyright, por ejemplo, "© 2025 Librería Virtual".</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h4 id="2-catalogohtml-catalogo-de-productos">2. catalogo.html - Catálogo de Productos</h4>
+<p><strong>Propósito:</strong><br />
+Muestra detalles de un libro específico del catálogo ("El Hobbit") con información estructurada.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "El Hobbit" y la misma barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: 
+- Una sección con un subtítulo "Detalles del Libro" que incluya una tabla. La tabla debe tener dos columnas ("Característica" y "Descripción") y al menos tres filas con ejemplos (por ejemplo, "Autor - J.R.R. Tolkien", "Año - 1937", "Precio - $15.00").
+- Una imagen representativa del libro (por ejemplo, la portada), ubicada debajo de la tabla.
+- <strong>Pie de página</strong>: El mismo texto de copyright que en la página principal.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h4 id="3-nosotroshtml-nosotros">3. nosotros.html - Nosotros</h4>
+<p><strong>Propósito:</strong><br />
+Presenta información sobre la tienda y su propósito.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Sobre Nosotros" y la barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: 
+- Un artículo con un subtítulo como "Nuestra Misión" seguido de un párrafo breve (por ejemplo, "Somos una librería apasionada por acercar la literatura a todos").
+- Un bloque lateral (aside) con un subtítulo como "Dato Curioso" y un texto breve (por ejemplo, "¡Vendimos nuestro primer libro en menos de 24 horas!").
+- Una imagen relacionada (por ejemplo, una foto de una estantería), debajo del texto.
+- <strong>Pie de página</strong>: El mismo texto de copyright que en las otras páginas.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;footer&gt;</code>.</p>
+<hr />
+<h4 id="4-contactohtml-contacto_2">4. contacto.html - Contacto</h4>
+<p><strong>Propósito:</strong><br />
+Permite a los visitantes enviar consultas o pedidos a la tienda mediante un formulario.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Contáctanos" y la barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: Una sección con un subtítulo como "Envía tu Consulta" que contenga un formulario. El formulario debe incluir:
+- Un campo de texto para el nombre con una etiqueta asociada ("Nombre").
+- Un campo de correo electrónico con una etiqueta ("Email").
+- Un área de texto para el mensaje con una etiqueta ("Mensaje"), con un tamaño adecuado (por ejemplo, 4 filas y 50 columnas).
+- Un botón de envío con la palabra "Enviar".
+- <strong>Pie de página</strong>: El mismo texto de copyright que en las otras páginas.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code> (type="text" y "email"), <code>&lt;textarea&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h3 id="notas-generales_2">Notas Generales</h3>
+<ul>
+<li>Las páginas deben estar interconectadas mediante la barra de navegación.</li>
+<li>La carpeta <code>images/</code> debe incluir al menos dos imágenes: una para el libro (<code>libro1.jpg</code>) y otra para la sección "Nosotros" (<code>estanteria.jpg</code>).</li>
+<li>El proyecto debe subirse a GitHub y publicarse en GitHub Pages siguiendo los pasos estándar (inicializar Git, crear repositorio, commit, push y configurar Pages).</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<h3 id="sitio-de-viajes-y-turismo">Sitio de Viajes y Turismo</h3>
+<h4 id="estructura-de-carpetas-sugerida_3">Estructura de Carpetas Sugerida</h4>
+<div class="highlight"><pre><span></span><code>viajes-turismo/
+│
+├── index.html           # Página principal
+├── destinos.html        # Detalle de un destino
+├── sobre.html           # Información sobre el sitio
+├── contacto.html        # Formulario de contacto
+├── images/              # Carpeta para imágenes
+│   ├── machupicchu.jpg  # Imagen de Machu Picchu
+│   └── viajero.jpg      # Imagen de un viajero o mapa
+└── README.md            # Descripción del proyecto para GitHub
+</code></pre></div>
+<h4 id="1-indexhtml-pagina-principal_3">1. index.html - Página Principal</h4>
+<p><strong>Propósito:</strong><br />
+Es la página de bienvenida que presenta el sitio y destaca algunos destinos turísticos.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Explora el Mundo" y una barra de navegación con enlaces a las otras páginas (Inicio, Destinos, Sobre Nosotros, Contacto).
+- <strong>Contenido principal</strong>: Una sección con un subtítulo como "Destinos Populares" seguida de una lista desordenada con tres destinos (por ejemplo, "París", "Machu Picchu", "Tokio"). Uno de ellos ("Machu Picchu") debe enlazar a <code>destinos.html</code>, mientras que los otros pueden ser texto plano.
+- <strong>Pie de página</strong>: Un texto simple con el copyright, por ejemplo, "© 2025 Viajes y Turismo".</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h4 id="2-destinoshtml-detalle-de-un-destino">2. destinos.html - Detalle de un Destino</h4>
+<p><strong>Propósito:</strong><br />
+Muestra información detallada sobre un destino turístico específico ("Machu Picchu").</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Machu Picchu" y la misma barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: 
+- Una sección con un subtítulo "Información del Destino" que incluya una tabla. La tabla debe tener dos columnas ("Aspecto" y "Detalles") y al menos tres filas con ejemplos (por ejemplo, "Ubicación - Perú", "Altitud - 2,430 metros", "Costo de Entrada - $50").
+- Una imagen representativa del destino (por ejemplo, una foto de Machu Picchu), ubicada debajo de la tabla.
+- <strong>Pie de página</strong>: El mismo texto de copyright que en la página principal.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h4 id="3-sobrehtml-sobre-nosotros">3. sobre.html - Sobre Nosotros</h4>
+<p><strong>Propósito:</strong><br />
+Presenta información sobre el propósito del sitio y sus creadores.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Sobre Nosotros" y la barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: 
+- Un artículo con un subtítulo como "Nuestra Pasión" seguido de un párrafo breve (por ejemplo, "Amamos compartir los mejores destinos para inspirar tus próximas aventuras").
+- Un bloque lateral (aside) con un subtítulo como "Dato Curioso" y un texto breve (por ejemplo, "¡Hemos visitado más de 20 países!").
+- Una imagen relacionada (por ejemplo, un mapa o una foto de un viajero), debajo del texto.
+- <strong>Pie de página</strong>: El mismo texto de copyright que en las otras páginas.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;footer&gt;</code>.</p>
+<hr />
+<h4 id="4-contactohtml-contacto_3">4. contacto.html - Contacto</h4>
+<p><strong>Propósito:</strong><br />
+Permite a los visitantes enviar consultas o solicitar más información sobre viajes.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Contáctanos" y la barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: Una sección con un subtítulo como "Planifica tu Viaje" que contenga un formulario. El formulario debe incluir:
+- Un campo de texto para el nombre con una etiqueta asociada ("Nombre").
+- Un campo de correo electrónico con una etiqueta ("Email").
+- Un área de texto para el mensaje con una etiqueta ("Mensaje"), con un tamaño adecuado (por ejemplo, 4 filas y 50 columnas).
+- Un botón de envío con la palabra "Enviar".
+- <strong>Pie de página</strong>: El mismo texto de copyright que en las otras páginas.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code> (type="text" y "email"), <code>&lt;textarea&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h3 id="notas-generales_3">Notas Generales</h3>
+<ul>
+<li>Las páginas deben estar interconectadas mediante la barra de navegación.</li>
+<li>La carpeta <code>images/</code> debe incluir al menos dos imágenes: una para el destino (<code>machupicchu.jpg</code>) y otra para la sección "Sobre Nosotros" (<code>viajero.jpg</code>).</li>
+<li>El proyecto debe subirse a GitHub y publicarse en GitHub Pages siguiendo los pasos estándar (inicializar Git, crear repositorio, commit, push y configurar Pages).</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<h3 id="galeria-de-arte-virtual">Galería de Arte Virtual</h3>
+<h4 id="estructura-de-carpetas-sugerida_4">Estructura de Carpetas Sugerida</h4>
+<div class="highlight"><pre><span></span><code>galeria-arte-virtual/
+│
+├── index.html           # Página principal
+├── obras.html           # Detalle de una obra
+├── sobre.html           # Información sobre la galería
+├── contacto.html        # Formulario de contacto
+├── images/              # Carpeta para imágenes
+│   ├── noche-estrellada.jpg  # Imagen de &quot;La Noche Estrellada&quot;
+│   └── museo.jpg        # Imagen de un museo o pinceles
+└── README.md            # Descripción del proyecto para GitHub
+</code></pre></div>
+<h4 id="1-indexhtml-pagina-principal_4">1. index.html - Página Principal</h4>
+<p><strong>Propósito:</strong><br />
+Es la página de bienvenida que presenta la galería y destaca algunas obras de arte.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Galería de Arte Virtual" y una barra de navegación con enlaces a las otras páginas (Inicio, Obras, Sobre la Galería, Contacto).
+- <strong>Contenido principal</strong>: Una sección con un subtítulo como "Obras Destacadas" seguida de una lista desordenada con tres títulos de obras (por ejemplo, "La Noche Estrellada", "Mona Lisa", "El Grito"). Una de ellas ("La Noche Estrellada") debe enlazar a <code>obras.html</code>, mientras que las otras pueden ser texto plano.
+- <strong>Pie de página</strong>: Un texto simple con el copyright, por ejemplo, "© 2025 Galería de Arte Virtual".</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h4 id="2-obrashtml-detalle-de-una-obra">2. obras.html - Detalle de una Obra</h4>
+<p><strong>Propósito:</strong><br />
+Muestra información detallada sobre una obra de arte específica ("La Noche Estrellada").</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "La Noche Estrellada" y la misma barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: 
+- Una sección con un subtítulo "Detalles de la Obra" que incluya una tabla. La tabla debe tener dos columnas ("Aspecto" y "Información") y al menos tres filas con ejemplos (por ejemplo, "Artista - Vincent van Gogh", "Año - 1889", "Técnica - Óleo sobre lienzo").
+- Una imagen representativa de la obra (por ejemplo, una foto de "La Noche Estrellada"), ubicada debajo de la tabla.
+- <strong>Pie de página</strong>: El mismo texto de copyright que en la página principal.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h4 id="3-sobrehtml-sobre-la-galeria">3. sobre.html - Sobre la Galería</h4>
+<p><strong>Propósito:</strong><br />
+Presenta información sobre la galería virtual y su propósito.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Sobre la Galería" y la barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: 
+- Un artículo con un subtítulo como "Nuestra Visión" seguido de un párrafo breve (por ejemplo, "Queremos acercar el arte a todos, desde cualquier rincón del mundo").
+- Un bloque lateral (aside) con un subtítulo como "Dato Curioso" y un texto breve (por ejemplo, "¡Nuestra obra más visitada tiene más de 1,000 vistas!").
+- Una imagen relacionada (por ejemplo, una foto de un museo o pinceles), debajo del texto.
+- <strong>Pie de página</strong>: El mismo texto de copyright que en las otras páginas.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;footer&gt;</code>.</p>
+<hr />
+<h4 id="4-contactohtml-contacto_4">4. contacto.html - Contacto</h4>
+<p><strong>Propósito:</strong><br />
+Permite a los visitantes enviar comentarios o consultas sobre las obras o la galería.</p>
+<p><strong>Estructura y Contenido:</strong>
+- <strong>Encabezado</strong>: Un título principal como "Contáctanos" y la barra de navegación con enlaces a todas las páginas.
+- <strong>Contenido principal</strong>: Una sección con un subtítulo como "Déjanos tu Opinión" que contenga un formulario. El formulario debe incluir:
+- Un campo de texto para el nombre con una etiqueta asociada ("Nombre").
+- Un campo de correo electrónico con una etiqueta ("Email").
+- Un área de texto para el mensaje con una etiqueta ("Mensaje"), con un tamaño adecuado (por ejemplo, 4 filas y 50 columnas).
+- Un botón de envío con la palabra "Enviar".
+- <strong>Pie de página</strong>: El mismo texto de copyright que en las otras páginas.</p>
+<p><strong>Etiquetas a usar:</strong><br />
+<code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code> (type="text" y "email"), <code>&lt;textarea&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<hr />
+<h3 id="notas-generales_4">Notas Generales</h3>
+<ul>
+<li>Las páginas deben estar interconectadas mediante la barra de navegación.</li>
+<li>La carpeta <code>images/</code> debe incluir al menos dos imágenes: una para la obra (<code>noche-estrellada.jpg</code>) y otra para la sección "Sobre la Galería" (<code>museo.jpg</code>).</li>
+<li>El proyecto debe subirse a GitHub y publicarse en GitHub Pages siguiendo los pasos estándar (inicializar Git, crear repositorio, commit, push y configurar Pages).</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="criterios-de-evaluacion"><strong>Criterios de Evaluación:</strong></h3>
+<ul>
+<li>Estructura HTML (60%): El proyecto incluye todas las páginas requeridas con la estructura HTML correcta, utilizando las etiquetas especificadas de manera apropiada y semántica.
+Las páginas contienen todo el contenido solicitado, los enlaces funcionan correctamente entre páginas, y las imágenes están correctamente implementadas.</li>
+<li>Configuración de GitHub (20%): El repositorio está correctamente configurado en GitHub, contiene todos los archivos necesarios, y tiene commits descriptivos del proceso de desarrollo.</li>
+<li>Despliegue en GitHub Pages (20%): El sitio está correctamente publicado y accesible a través de GitHub Pages, con todas las páginas y recursos funcionando adecuadamente.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 &copy; by JFVG
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs.sticky", "navigation.tabs", "navigation.top", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../js/password-protect.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
